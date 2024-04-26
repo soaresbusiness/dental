@@ -1,0 +1,5 @@
+inherited F_ConsultaPacienteTratamento: TF_ConsultaPacienteTratamento
+  Left = 472
+  Top = 154
+  OnClose = FormClose
+end

@@ -1,0 +1,10 @@
+object FRel_Movimento: TFRel_Movimento
+  Left = 308
+  Height = 517
+  Top = 288
+  Width = 871
+  BorderStyle = bsSingle
+  Caption = 'Relatório de Movimento'
+  Position = poDesktopCenter
+  LCLVersion = '2.2.4.0'
+end

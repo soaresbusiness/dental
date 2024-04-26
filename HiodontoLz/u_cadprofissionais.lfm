@@ -1,0 +1,491 @@
+inherited F_cadProfissionais: TF_cadProfissionais
+  Left = 395
+  Height = 417
+  Top = 70
+  Width = 669
+  BorderIcons = [biSystemMenu]
+  Caption = 'Cadastro de Profissionais'
+  ClientHeight = 417
+  ClientWidth = 669
+  OnShow = FormShow
+  inherited Panel1: TPanel
+    Top = 360
+    Width = 669
+    ClientWidth = 669
+  end
+  inherited Panel2: TPanel
+    Height = 360
+    Width = 669
+    ClientHeight = 360
+    ClientWidth = 669
+    object PageControl1: TPageControl[0]
+      Left = 8
+      Height = 296
+      Top = 8
+      Width = 640
+      ActivePage = TabSheet2
+      TabIndex = 1
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'Consulta'
+        ClientHeight = 268
+        ClientWidth = 632
+        object RxDBGrid1: TRxDBGrid
+          Left = 8
+          Height = 256
+          Top = 8
+          Width = 616
+          ColumnDefValues.BlobText = '(blob)'
+          TitleButtons = False
+          AutoSort = True
+          Columns = <          
+            item
+              Title.Alignment = taCenter
+              Title.Orientation = toHorizontal
+              Title.Caption = 'Código:'
+              FieldName = 'PROFIS_IDPROFISSIONAL'
+              EditButtons = <>
+              Filter.DropDownRows = 0
+              Filter.EmptyValue = '(Empty)'
+              Filter.NotEmptyValue = '(Não está vazio)'
+              Filter.AllValue = '(Todos os valores)'
+              Filter.EmptyFont.Style = [fsItalic]
+              Filter.ItemIndex = -1
+              Footers = <>
+            end          
+            item
+              Title.Alignment = taLeftJustify
+              Title.Orientation = toHorizontal
+              Title.Caption = 'Profissional:'
+              Width = 350
+              FieldName = 'PROFIS_NOME'
+              EditButtons = <>
+              Filter.DropDownRows = 0
+              Filter.EmptyValue = '(Empty)'
+              Filter.NotEmptyValue = '(Não está vazio)'
+              Filter.AllValue = '(Todos os valores)'
+              Filter.EmptyFont.Style = [fsItalic]
+              Filter.ItemIndex = -1
+              Footers = <>
+            end          
+            item
+              Title.Alignment = taCenter
+              Title.Orientation = toHorizontal
+              Title.Caption = 'Celular:'
+              Width = 120
+              FieldName = 'PROFIS_CEL'
+              EditButtons = <>
+              Filter.DropDownRows = 0
+              Filter.EmptyValue = '(Empty)'
+              Filter.NotEmptyValue = '(Não está vazio)'
+              Filter.AllValue = '(Todos os valores)'
+              Filter.EmptyFont.Style = [fsItalic]
+              Filter.ItemIndex = -1
+              Footers = <>
+            end>
+          KeyStrokes = <          
+            item
+              Command = rxgcShowFindDlg
+              ShortCut = 16454
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowColumnsDlg
+              ShortCut = 16471
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowFilterDlg
+              ShortCut = 16468
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowSortDlg
+              ShortCut = 16467
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowQuickFilter
+              ShortCut = 16465
+              Enabled = True
+            end          
+            item
+              Command = rxgcHideQuickFilter
+              ShortCut = 16456
+              Enabled = True
+            end          
+            item
+              Command = rxgcSelectAll
+              ShortCut = 16449
+              Enabled = True
+            end          
+            item
+              Command = rxgcDeSelectAll
+              ShortCut = 16429
+              Enabled = True
+            end          
+            item
+              Command = rxgcInvertSelection
+              ShortCut = 16426
+              Enabled = True
+            end          
+            item
+              Command = rxgcOptimizeColumnsWidth
+              ShortCut = 16427
+              Enabled = True
+            end          
+            item
+              Command = rxgcCopyCellValue
+              ShortCut = 16451
+              Enabled = True
+            end>
+          FooterOptions.DrawFullLine = False
+          SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+          SearchOptions.FromStart = False
+          OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+          AlternateColor = clMoneyGreen
+          Color = clWindow
+          DrawFullLine = False
+          FocusColor = clRed
+          SelectedColor = clHighlight
+          DataSource = dmPrincipal.dsProfissionais
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          TabOrder = 0
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Dados'
+        ClientHeight = 268
+        ClientWidth = 632
+        object DBEdit10: TDBEdit
+          Left = 12
+          Height = 23
+          Top = 152
+          Width = 350
+          DataField = 'PROFIS_EMAIL'
+          DataSource = dmPrincipal.dsProfissionais
+          MaxLength = 80
+          TabOrder = 0
+        end
+        object Label10: TLabel
+          Left = 8
+          Height = 15
+          Top = 136
+          Width = 32
+          Caption = 'Email:'
+          ParentColor = False
+        end
+        object DBEdit14: TDBEdit
+          Left = 364
+          Height = 23
+          Top = 152
+          Width = 174
+          DataField = 'PROFIS_CRO'
+          DataSource = dmPrincipal.dsProfissionais
+          CharCase = ecUppercase
+          MaxLength = 20
+          TabOrder = 1
+        end
+        object Label15: TLabel
+          Left = 368
+          Height = 15
+          Top = 136
+          Width = 27
+          Caption = 'CRO:'
+          ParentColor = False
+        end
+        object DBEdit4: TDBEdit
+          Left = 408
+          Height = 23
+          Top = 113
+          Width = 134
+          DataField = 'PROFIS_APELIDO'
+          DataSource = dmPrincipal.dsProfissionais
+          MaxLength = 30
+          TabOrder = 2
+        end
+        object DBDateEdit1: TDBDateEdit
+          Left = 296
+          Height = 23
+          Top = 113
+          Width = 103
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doNone
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 0
+          TabOrder = 4
+          DataField = 'PROFIS_DATANASC'
+          DataSource = dmPrincipal.dsProfissionais
+        end
+        object DBEdit9: TDBEdit
+          Left = 188
+          Height = 23
+          Top = 113
+          Width = 105
+          DataField = 'PROFIS_CEL'
+          DataSource = dmPrincipal.dsProfissionais
+          EditMask = '00000-000;1;_'
+          MaxLength = 14
+          TabOrder = 5
+        end
+        object Label12: TLabel
+          Left = 9
+          Height = 15
+          Top = 97
+          Width = 40
+          Caption = 'Cidade:'
+          ParentColor = False
+        end
+        object Label9: TLabel
+          Left = 192
+          Height = 15
+          Top = 97
+          Width = 41
+          Caption = 'Celular:'
+          FocusControl = DBEdit9
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 298
+          Height = 15
+          Top = 96
+          Width = 64
+          Caption = 'Data. Nasc.:'
+          ParentColor = False
+        end
+        object Label4: TLabel
+          Left = 408
+          Height = 15
+          Top = 97
+          Width = 45
+          Caption = 'Apelido:'
+          ParentColor = False
+        end
+        object DBEdit12: TDBEdit
+          Left = 471
+          Height = 23
+          Top = 67
+          Width = 146
+          DataField = 'PROFIS_BAIRRO'
+          DataSource = dmPrincipal.dsProfissionais
+          MaxLength = 60
+          TabOrder = 6
+        end
+        object Label13: TLabel
+          Left = 472
+          Height = 15
+          Top = 52
+          Width = 37
+          Caption = 'Bairro:'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 184
+          Height = 15
+          Top = 52
+          Width = 55
+          Caption = 'Endereço:'
+          ParentColor = False
+        end
+        object BitBtn2: TBitBtn
+          Left = 98
+          Height = 30
+          Top = 63
+          Width = 75
+          Action = act_BuscaCep
+          TabOrder = 7
+        end
+        object DBEdit5: TDBEdit
+          Left = 10
+          Height = 23
+          Top = 67
+          Width = 80
+          DataField = 'PROFIS_CEP'
+          DataSource = dmPrincipal.dsProfissionais
+          MaxLength = 50
+          TabOrder = 8
+        end
+        object Label7: TLabel
+          Left = 8
+          Height = 15
+          Top = 52
+          Width = 20
+          Caption = 'CEP'
+          ParentColor = False
+        end
+        object DBEdit1: TDBEdit
+          Left = 8
+          Height = 23
+          Top = 29
+          Width = 75
+          DataField = 'PROFIS_IDPROFISSIONAL'
+          DataSource = dmPrincipal.dsProfissionais
+          ReadOnly = True
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 3
+          TabStop = False
+        end
+        object Label1: TLabel
+          Left = 8
+          Height = 15
+          Top = 13
+          Width = 41
+          Caption = 'Código:'
+          FocusControl = DBEdit1
+          ParentColor = False
+        end
+        object DBEdit3: TDBEdit
+          Left = 89
+          Height = 23
+          Top = 29
+          Width = 343
+          DataField = 'PROFIS_NOME'
+          DataSource = dmPrincipal.dsProfissionais
+          CharCase = ecUppercase
+          MaxLength = 60
+          TabOrder = 9
+        end
+        object Label3: TLabel
+          Left = 89
+          Height = 15
+          Top = 13
+          Width = 37
+          Caption = 'Nome:'
+          ParentColor = False
+        end
+        object Label2: TLabel
+          Left = 440
+          Height = 15
+          Top = 13
+          Width = 25
+          Caption = 'CPF.:'
+          ParentColor = False
+        end
+        object DBEdit2: TDBEdit
+          Left = 442
+          Height = 23
+          Top = 29
+          Width = 96
+          DataField = 'PROFIS_CPF'
+          DataSource = dmPrincipal.dsProfissionais
+          EditMask = '000.000.000-00;1'
+          MaxLength = 20
+          TabOrder = 10
+          OnExit = act_validar_CPFExecute
+        end
+        object DBEdit11: TDBEdit
+          Left = 536
+          Height = 23
+          Top = 29
+          Width = 81
+          DataField = 'PROFIS_DATACAD'
+          DataSource = dmPrincipal.dsProfissionais
+          ReadOnly = True
+          MaxLength = 0
+          TabOrder = 11
+        end
+        object Label11: TLabel
+          Left = 536
+          Height = 15
+          Top = 13
+          Width = 26
+          Caption = 'Data'
+          ParentColor = False
+        end
+        object DBEdit7: TDBEdit
+          Left = 9
+          Height = 23
+          Top = 112
+          Width = 176
+          DataField = 'PROFIS_MUNICIPIO'
+          DataSource = dmPrincipal.dsProfissionais
+          MaxLength = 60
+          TabOrder = 12
+        end
+        object DBEdit6: TDBEdit
+          Left = 184
+          Height = 23
+          Top = 67
+          Width = 280
+          DataField = 'PROFIS_ENDERECO'
+          DataSource = dmPrincipal.dsProfissionais
+          MaxLength = 60
+          TabOrder = 13
+        end
+      end
+    end
+    object Edtcon: TEdit[1]
+      Left = 8
+      Height = 23
+      Top = 329
+      Width = 624
+      CharCase = ecUppercase
+      OnChange = act_consultaExecute
+      TabStop = False
+      TabOrder = 1
+    end
+    object Label16: TLabel[2]
+      Left = 8
+      Height = 15
+      Top = 312
+      Width = 190
+      Caption = 'Digite aqui o item a ser pequisado:'
+      ParentColor = False
+    end
+  end
+  inherited ActionList1: TActionList
+    Left = 584
+    Top = 80
+    inherited act_Novo: TAction
+      OnExecute = act_NovoExecute
+    end
+    inherited act_Alterar: TAction
+      OnExecute = act_AlterarExecute
+    end
+    inherited act_Cancelar: TAction
+      OnExecute = act_CancelarExecute
+    end
+    inherited act_Salvar: TAction
+      OnExecute = act_SalvarExecute
+    end
+    object act_BuscaCep: TAction[5]
+      Caption = 'Busca Cep'
+      OnExecute = act_BuscaCepExecute
+    end
+    object act_carregaFoto: TAction[6]
+      Caption = 'Carrega Foto'
+    end
+    object act_consulta: TAction[7]
+      Caption = 'Consulta'
+      OnExecute = act_consultaExecute
+    end
+    object act_validar_CPF: TAction[8]
+      Caption = 'Validar CPF'
+      OnExecute = act_validar_CPFExecute
+    end
+  end
+  inherited ACBrEnterTab1: TACBrEnterTab
+    Left = 584
+    Top = 128
+  end
+  object ACBrValidador1: TACBrValidador[4]
+    IgnorarChar = './-'
+    Left = 416
+    Top = 208
+  end
+  object ACBrCEP1: TACBrCEP[5]
+    ProxyPort = '8080'
+    ParseText = True
+    WebService = wsViaCep
+    PesquisarIBGE = True
+    OnBuscaEfetuada = ACBrCEP1BuscaEfetuada
+    Left = 576
+    Top = 200
+  end
+  object odfoto: TOpenPictureDialog[6]
+    Left = 512
+    Top = 216
+  end
+end

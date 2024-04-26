@@ -1,0 +1,105 @@
+object F_Padrao: TF_Padrao
+  Left = 293
+  Height = 493
+  Top = 168
+  Width = 822
+  BorderStyle = bsSingle
+  Caption = 'F_padrao'
+  ClientHeight = 493
+  ClientWidth = 822
+  Font.Style = [fsBold]
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '2.2.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 57
+    Top = 436
+    Width = 822
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 57
+    ClientWidth = 822
+    Color = 6710784
+    ParentColor = False
+    TabOrder = 0
+    object botaoNovo: TBitBtn
+      Left = 24
+      Height = 30
+      Top = 16
+      Width = 75
+      Action = act_Novo
+      TabOrder = 0
+    end
+    object botaoAlterar: TBitBtn
+      Left = 104
+      Height = 30
+      Top = 16
+      Width = 75
+      Action = act_Alterar
+      TabOrder = 1
+    end
+    object botaoCancelar: TBitBtn
+      Left = 184
+      Height = 30
+      Top = 16
+      Width = 75
+      Action = act_Cancelar
+      TabOrder = 2
+    end
+    object botaoSalvar: TBitBtn
+      Left = 272
+      Height = 30
+      Top = 16
+      Width = 75
+      Action = act_Salvar
+      TabOrder = 3
+    end
+    object botaoFechar: TBitBtn
+      Left = 488
+      Height = 30
+      Top = 16
+      Width = 75
+      Action = act_Fechar
+      TabOrder = 4
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 436
+    Top = 0
+    Width = 822
+    Align = alClient
+    Color = clWhite
+    Font.Color = clWindowText
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+  end
+  object ActionList1: TActionList
+    Left = 544
+    Top = 16
+    object act_Novo: TAction
+      Caption = 'Novo'
+    end
+    object act_Alterar: TAction
+      Caption = 'Alterar'
+    end
+    object act_Cancelar: TAction
+      Caption = 'Cancelar'
+    end
+    object act_Salvar: TAction
+      Caption = 'Salvar'
+    end
+    object act_Fechar: TAction
+      Caption = 'Fechar'
+      OnExecute = act_FecharExecute
+    end
+  end
+  object ACBrEnterTab1: TACBrEnterTab
+    EnterAsTab = True
+    Left = 552
+    Top = 80
+  end
+end

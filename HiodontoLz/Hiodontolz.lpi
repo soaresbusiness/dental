@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="Hiodontolz"/>
+      <Scaled Value="True"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <VersionInfo>
+      <Language Value="0416"/>
+    </VersionInfo>
+    <BuildModes>
+      <Item Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes>
+        <Mode Name="default"/>
+      </Modes>
+    </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="indylaz"/>
+      </Item>
+      <Item>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item>
+      <Item>
+        <PackageName Value="JvCustomLazR"/>
+      </Item>
+      <Item>
+        <PackageName Value="ACBrTCP"/>
+      </Item>
+      <Item>
+        <PackageName Value="JvDBLazR"/>
+      </Item>
+      <Item>
+        <PackageName Value="rxnew"/>
+      </Item>
+      <Item>
+        <PackageName Value="lazreport"/>
+      </Item>
+      <Item>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item>
+      <Item>
+        <PackageName Value="ACBrDiversos"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="zcomponent"/>
+      </Item>
+      <Item>
+        <PackageName Value="SpkToolbarPackage"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="Hiodontolz.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_principal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_principal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_Principal"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_formpadrao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_Padrao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_formPadrao"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadpacientes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadPaciente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadPacientes"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadconvenio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_CadConvenio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadprofissionais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadProfissionais"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadtratamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadTratamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadTratamentos"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadprocedimentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadProcedimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadProcedimentos"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultapadrao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_consultaPadrao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultapaciente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_ConsultaPaciente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadempresa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadEmpresa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadEmpresa"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_dente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_dente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultaprocedimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_consultaProcedimentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultaprofissional.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_consultaProfissional"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_dmprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultatratamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_consultaTratamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadorcamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadOrcamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadOrcamentos"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultaorcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_ConsultaOrcamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_consultaOrcamento"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_movimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_Movimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_Movimento"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_relatoriomovimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRel_Movimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_RelatorioMovimento"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_login.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_login"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadgerente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadUsuarios"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadGerente"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadperfil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_Perfil"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadPerfil"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadtipocontato.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_CadTipoContato"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadTipocontato"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultapacientetratamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_ConsultaPacienteTratamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_consultaPacientetratamento"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="C:\HiodontoLz\HiodontoLz.exe"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+        <DebugInfoType Value="dsDwarf2Set"/>
+        <UseLineInfoUnit Value="False"/>
+        <UseExternalDbgSyms Value="True"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions>
+      <Item>
+        <Name Value="EAbort"/>
+      </Item>
+      <Item>
+        <Name Value="ECodetoolError"/>
+      </Item>
+      <Item>
+        <Name Value="EFOpenError"/>
+      </Item>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

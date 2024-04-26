@@ -1,0 +1,170 @@
+inherited F_consultaProcedimentos: TF_consultaProcedimentos
+  Left = 453
+  Height = 402
+  Top = 191
+  Width = 693
+  Caption = 'Consulta Procedimentos'
+  ClientHeight = 402
+  ClientWidth = 693
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited Panel1: TPanel
+    Top = 352
+    Width = 693
+    ClientWidth = 693
+  end
+  inherited EdtCon: TEdit
+    Left = 126
+    Width = 542
+    OnChange = act_pesquisarExecute
+  end
+  inherited Label4: TLabel
+    Left = 128
+    Top = 0
+  end
+  inherited Label5: TLabel
+    Left = 8
+    Top = -1
+  end
+  inherited Cbpesq: TComboBox
+    Left = 8
+    ItemIndex = 0
+    Items.Strings = (
+      'Todos'
+      'Código'
+      'Procedimento'
+    )
+    Text = 'Todos'
+  end
+  object RxDBGrid1: TRxDBGrid[5]
+    Left = 8
+    Height = 280
+    Top = 48
+    Width = 660
+    ColumnDefValues.BlobText = '(blob)'
+    TitleButtons = False
+    AutoSort = True
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Cód. Proced.:'
+        Width = 64
+        FieldName = 'PROCED_ID'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Procedimento:'
+        Width = 400
+        FieldName = 'PROCEDIMENTO'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Valor:'
+        Width = 100
+        FieldName = 'VALOR'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end>
+    KeyStrokes = <    
+      item
+        Command = rxgcShowFindDlg
+        ShortCut = 16454
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowColumnsDlg
+        ShortCut = 16471
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowFilterDlg
+        ShortCut = 16468
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowSortDlg
+        ShortCut = 16467
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowQuickFilter
+        ShortCut = 16465
+        Enabled = True
+      end    
+      item
+        Command = rxgcHideQuickFilter
+        ShortCut = 16456
+        Enabled = True
+      end    
+      item
+        Command = rxgcSelectAll
+        ShortCut = 16449
+        Enabled = True
+      end    
+      item
+        Command = rxgcDeSelectAll
+        ShortCut = 16429
+        Enabled = True
+      end    
+      item
+        Command = rxgcInvertSelection
+        ShortCut = 16426
+        Enabled = True
+      end    
+      item
+        Command = rxgcOptimizeColumnsWidth
+        ShortCut = 16427
+        Enabled = True
+      end    
+      item
+        Command = rxgcCopyCellValue
+        ShortCut = 16451
+        Enabled = True
+      end>
+    FooterOptions.DrawFullLine = False
+    SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+    SearchOptions.FromStart = False
+    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+    AlternateColor = clMoneyGreen
+    Color = clWindow
+    DrawFullLine = False
+    FocusColor = clRed
+    SelectedColor = clHighlight
+    DataSource = dmPrincipal.dsProcedimentos
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ReadOnly = True
+    TabOrder = 3
+  end
+  inherited ActionList1: TActionList[6]
+    Left = 688
+    Top = 8
+    inherited act_pesquisar: TAction
+      OnExecute = act_pesquisarExecute
+    end
+  end
+end

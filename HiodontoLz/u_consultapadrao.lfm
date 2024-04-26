@@ -1,0 +1,90 @@
+object F_consultaPadrao: TF_consultaPadrao
+  Left = 316
+  Height = 450
+  Top = 171
+  Width = 658
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Consulta'
+  ClientHeight = 450
+  ClientWidth = 658
+  Font.Style = [fsBold]
+  Position = poDesktopCenter
+  LCLVersion = '2.2.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 400
+    Width = 658
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 658
+    Color = clTeal
+    Font.Color = clWhite
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 24
+      Height = 13
+      Top = 16
+      Width = 142
+      Caption = 'Quantidade de Registros:'
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 169
+      Height = 13
+      Top = 16
+      Width = 28
+      Caption = '0000'
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object EdtCon: TEdit
+    Left = 138
+    Height = 23
+    Top = 17
+    Width = 478
+    TabOrder = 1
+  end
+  object Label4: TLabel
+    Left = 136
+    Height = 15
+    Top = -3
+    Width = 192
+    Caption = 'Digte aqui o item a ser pesquisado:'
+  end
+  object Label5: TLabel
+    Left = 16
+    Height = 15
+    Top = 0
+    Width = 77
+    Caption = 'Pesquisar por:'
+  end
+  object Cbpesq: TComboBox
+    Left = 20
+    Height = 23
+    Top = 17
+    Width = 112
+    ItemHeight = 15
+    OnChange = CbpesqChange
+    TabOrder = 2
+  end
+  object ActionList1: TActionList
+    Left = 624
+    Top = 40
+    object act_pesquisar: TAction
+      Caption = 'act_pesquisar'
+    end
+  end
+end

@@ -1,0 +1,315 @@
+object F_consultaTratamento: TF_consultaTratamento
+  Left = 303
+  Height = 542
+  Top = 201
+  Width = 794
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Consulta Tratamento'
+  ClientHeight = 542
+  ClientWidth = 794
+  Font.Height = -13
+  Font.Style = [fsBold]
+  OnShow = FormShow
+  LCLVersion = '2.2.2.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 17
+    Top = 1
+    Width = 74
+    Caption = 'Data Inicial:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 120
+    Height = 17
+    Top = 1
+    Width = 67
+    Caption = 'Data Final:'
+    ParentColor = False
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 16
+    Height = 25
+    Top = 20
+    Width = 93
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 0
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 44618
+    Time = 0.514959606480261
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object DateTimePicker2: TDateTimePicker
+    Left = 120
+    Height = 25
+    Top = 20
+    Width = 93
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 1
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 44618
+    Time = 0.515062384256453
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object RxRadioGroup1: TRxRadioGroup
+    Left = 344
+    Height = 44
+    Top = 10
+    Width = 400
+    AutoFill = True
+    Caption = 'Pesquisar por:'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 22
+    ClientWidth = 396
+    Columns = 2
+    ItemIndex = 1
+    Items.Strings = (
+      'Código'
+      'Nome'
+    )
+    TabOrder = 2
+  end
+  object Edtcon: TEdit
+    Left = 16
+    Height = 25
+    Top = 64
+    Width = 648
+    TabOrder = 3
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 492
+    Width = 794
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 794
+    Color = clTeal
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 4
+    object Label3: TLabel
+      Left = 32
+      Height = 17
+      Top = 16
+      Width = 156
+      Caption = 'Quantidade de Registros:'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 200
+      Height = 17
+      Top = 16
+      Width = 21
+      Caption = '000'
+      ParentColor = False
+    end
+  end
+  object CheckBox1: TCheckBox
+    Left = 229
+    Height = 21
+    Top = 22
+    Width = 78
+    Caption = 'Por Data:'
+    OnClick = CheckBox1Click
+    TabOrder = 5
+  end
+  object RxDBGrid1: TRxDBGrid
+    Left = 16
+    Height = 376
+    Top = 96
+    Width = 768
+    ColumnDefValues.BlobText = '(blob)'
+    TitleButtons = False
+    AutoSort = True
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Código:'
+        Width = 62
+        FieldName = 'IDTRATAMENTOS'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Data:'
+        FieldName = 'TRATAM_DATA'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Hora:'
+        Width = 74
+        FieldName = 'HORA'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Paciente'
+        Width = 300
+        FieldName = 'PAC_NOME'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Situação'
+        Width = 120
+        FieldName = 'SITUACAO'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end>
+    KeyStrokes = <    
+      item
+        Command = rxgcShowFindDlg
+        ShortCut = 16454
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowColumnsDlg
+        ShortCut = 16471
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowFilterDlg
+        ShortCut = 16468
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowSortDlg
+        ShortCut = 16467
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowQuickFilter
+        ShortCut = 16465
+        Enabled = True
+      end    
+      item
+        Command = rxgcHideQuickFilter
+        ShortCut = 16456
+        Enabled = True
+      end    
+      item
+        Command = rxgcSelectAll
+        ShortCut = 16449
+        Enabled = True
+      end    
+      item
+        Command = rxgcDeSelectAll
+        ShortCut = 16429
+        Enabled = True
+      end    
+      item
+        Command = rxgcInvertSelection
+        ShortCut = 16426
+        Enabled = True
+      end    
+      item
+        Command = rxgcOptimizeColumnsWidth
+        ShortCut = 16427
+        Enabled = True
+      end    
+      item
+        Command = rxgcCopyCellValue
+        ShortCut = 16451
+        Enabled = True
+      end>
+    FooterOptions.DrawFullLine = False
+    SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+    SearchOptions.FromStart = False
+    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+    AlternateColor = clMoneyGreen
+    Color = clWindow
+    DrawFullLine = False
+    FocusColor = clRed
+    SelectedColor = clHighlight
+    DataSource = dmPrincipal.dsTratamentos
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 6
+  end
+  object BitBtn1: TBitBtn
+    Left = 672
+    Height = 30
+    Top = 59
+    Width = 107
+    Action = act_pesquisar
+    TabOrder = 7
+  end
+  object ActionList1: TActionList
+    Left = 712
+    Top = 16
+    object act_pesquisar: TAction
+      Caption = 'Pesquisar'
+      OnExecute = act_pesquisarExecute
+    end
+  end
+end

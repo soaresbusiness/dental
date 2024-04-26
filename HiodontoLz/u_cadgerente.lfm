@@ -1,0 +1,19 @@
+inherited F_cadUsuarios: TF_cadUsuarios
+  Height = 251
+  Width = 621
+  Caption = 'Cadastro de Usuários'
+  ClientHeight = 251
+  ClientWidth = 621
+  inherited Panel1: TPanel
+    Top = 194
+    Width = 621
+    ClientWidth = 621
+    inherited botaoFechar: TBitBtn
+      Left = 448
+    end
+  end
+  inherited Panel2: TPanel
+    Height = 194
+    Width = 621
+  end
+end

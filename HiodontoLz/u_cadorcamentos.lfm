@@ -1,0 +1,793 @@
+inherited F_cadOrcamentos: TF_cadOrcamentos
+  Top = 191
+  Width = 794
+  Caption = 'Orcamentos'
+  ClientWidth = 794
+  OnShow = FormShow
+  inherited Panel1: TPanel
+    Width = 794
+    ClientWidth = 794
+    inherited botaoFechar: TBitBtn
+      Left = 640
+    end
+    object btnImprimir: TBitBtn[5]
+      Left = 424
+      Height = 30
+      Top = 16
+      Width = 75
+      Action = act_imprimir
+      TabOrder = 5
+    end
+    object BitBtn1: TBitBtn[6]
+      Left = 520
+      Height = 30
+      Top = 16
+      Width = 96
+      Action = act_Consultar
+      TabOrder = 6
+    end
+  end
+  inherited Panel2: TPanel
+    Width = 794
+    ClientWidth = 794
+    object Label1: TLabel[0]
+      Left = 16
+      Height = 15
+      Top = 8
+      Width = 38
+      Caption = 'Código'
+      ParentColor = False
+    end
+    object DBEdit1: TDBEdit[1]
+      Left = 16
+      Height = 23
+      Top = 27
+      Width = 80
+      DataField = 'IDORCAMENTO'
+      DataSource = dmPrincipal.dsOrcamentos
+      Alignment = taRightJustify
+      MaxLength = 0
+      TabOrder = 0
+      TabStop = False
+    end
+    object Label2: TLabel[2]
+      Left = 99
+      Height = 15
+      Top = 8
+      Width = 78
+      Caption = 'Cód.: Paciente'
+      ParentColor = False
+    end
+    object DBEdit2: TDBEdit[3]
+      Left = 99
+      Height = 23
+      Top = 27
+      Width = 80
+      DataField = 'IDPACIENTE'
+      DataSource = dmPrincipal.dsOrcamentos
+      Alignment = taRightJustify
+      MaxLength = 0
+      TabOrder = 1
+    end
+    object Label3: TLabel[4]
+      Left = 192
+      Height = 15
+      Top = 8
+      Width = 51
+      Caption = 'Paciente:'
+      ParentColor = False
+    end
+    object Label4: TLabel[5]
+      Left = 584
+      Height = 15
+      Top = 8
+      Width = 29
+      Caption = 'Data:'
+      ParentColor = False
+    end
+    object DBEdit3: TDBEdit[6]
+      Left = 584
+      Height = 23
+      Top = 24
+      Width = 80
+      DataField = 'ORCAM_DATA'
+      DataSource = dmPrincipal.dsOrcamentos
+      MaxLength = 0
+      TabOrder = 2
+      TabStop = False
+    end
+    object DBEdit4: TDBEdit[7]
+      Left = 672
+      Height = 23
+      Top = 24
+      Width = 80
+      DataField = 'ORCAM_HORA'
+      DataSource = dmPrincipal.dsOrcamentos
+      MaxLength = 0
+      TabOrder = 3
+      TabStop = False
+    end
+    object Label5: TLabel[8]
+      Left = 672
+      Height = 15
+      Top = 8
+      Width = 30
+      Caption = 'Hora:'
+      ParentColor = False
+    end
+    object RxDBGrid1: TRxDBGrid[9]
+      Left = 16
+      Height = 296
+      Top = 64
+      Width = 728
+      ColumnDefValues.BlobText = '(blob)'
+      TitleButtons = False
+      AutoSort = True
+      Columns = <      
+        item
+          Title.Alignment = taCenter
+          Title.Orientation = toHorizontal
+          Title.Caption = 'Código:'
+          FieldName = 'PROCED_ID'
+          EditButtons = <>
+          Filter.DropDownRows = 0
+          Filter.EmptyValue = '(Empty)'
+          Filter.NotEmptyValue = '(Não está vazio)'
+          Filter.AllValue = '(Todos os valores)'
+          Filter.EmptyFont.Style = [fsItalic]
+          Filter.ItemIndex = -1
+          Footers = <>
+          WordWrap = True
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Orientation = toHorizontal
+          Title.Caption = 'Procedimento'
+          Width = 450
+          FieldName = 'PROCEDIMENTO'
+          EditButtons = <>
+          Filter.DropDownRows = 0
+          Filter.EmptyValue = '(Empty)'
+          Filter.NotEmptyValue = '(Não está vazio)'
+          Filter.AllValue = '(Todos os valores)'
+          Filter.EmptyFont.Style = [fsItalic]
+          Filter.ItemIndex = -1
+          Footers = <>
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Orientation = toHorizontal
+          Title.Caption = 'Valor:'
+          Width = 120
+          FieldName = 'VALOR'
+          EditButtons = <>
+          Filter.DropDownRows = 0
+          Filter.EmptyValue = '(Empty)'
+          Filter.NotEmptyValue = '(Não está vazio)'
+          Filter.AllValue = '(Todos os valores)'
+          Filter.EmptyFont.Style = [fsItalic]
+          Filter.ItemIndex = -1
+          Footers = <>
+        end>
+      KeyStrokes = <      
+        item
+          Command = rxgcShowFindDlg
+          ShortCut = 16454
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowColumnsDlg
+          ShortCut = 16471
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowFilterDlg
+          ShortCut = 16468
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowSortDlg
+          ShortCut = 16467
+          Enabled = True
+        end      
+        item
+          Command = rxgcShowQuickFilter
+          ShortCut = 16465
+          Enabled = True
+        end      
+        item
+          Command = rxgcHideQuickFilter
+          ShortCut = 16456
+          Enabled = True
+        end      
+        item
+          Command = rxgcSelectAll
+          ShortCut = 16449
+          Enabled = True
+        end      
+        item
+          Command = rxgcDeSelectAll
+          ShortCut = 16429
+          Enabled = True
+        end      
+        item
+          Command = rxgcInvertSelection
+          ShortCut = 16426
+          Enabled = True
+        end      
+        item
+          Command = rxgcOptimizeColumnsWidth
+          ShortCut = 16427
+          Enabled = True
+        end      
+        item
+          Command = rxgcCopyCellValue
+          ShortCut = 16451
+          Enabled = True
+        end>
+      FooterOptions.DrawFullLine = False
+      SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+      SearchOptions.FromStart = False
+      OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+      AlternateColor = clMoneyGreen
+      Color = clWindow
+      DrawFullLine = False
+      FocusColor = clRed
+      SelectedColor = clHighlight
+      DataSource = dmPrincipal.dsItensOrcamentos
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisableDelete]
+      TabOrder = 4
+    end
+    object Edit1: TEdit[10]
+      Left = 16
+      Height = 23
+      Top = 368
+      Width = 80
+      TabOrder = 5
+      Visible = False
+    end
+    object Label6: TLabel[11]
+      Left = 536
+      Height = 37
+      Top = 368
+      Width = 72
+      Alignment = taCenter
+      Caption = 'Total:'
+      Font.Color = clWindowText
+      Font.Height = -27
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object DBText1: TDBText[12]
+      Left = 624
+      Height = 37
+      Top = 368
+      Width = 107
+      DataField = 'TOTALORCAMENTO'
+      DataSource = dmPrincipal.dsOrcamentos
+      Font.Color = clWindowText
+      Font.Height = -27
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object RxDBLookupCombo1: TRxDBLookupCombo[13]
+      Left = 184
+      Height = 27
+      Top = 24
+      Width = 392
+      AutoSize = True
+      ButtonOnlyWhenFocused = False
+      ButtonWidth = 15
+      Color = clWindow
+      DataField = 'IDPACIENTE'
+      DataSource = dmPrincipal.dsOrcamentos
+      PopUpFormOptions.Columns = <>
+      Flat = False
+      Glyph.Data = {
+        C2000000424DC200000000000000360000002800000007000000050000000100
+        2000000000008C00000064000000640000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000FF0000000000000000000000000000000000000000000000FF0000
+        00FF000000FF000000000000000000000000000000FF000000FF000000FF0000
+        00FF000000FF0000000000000000000000000000000000000000000000000000
+        000000000000
+      }
+      NumGlyphs = 1
+      OnClosePopup = RxDBLookupCombo1ClosePopup
+      ParentColor = False
+      ReadOnly = False
+      TabOrder = 6
+      TabStop = True
+      LookupDisplay = 'PAC_NOME'
+      LookupField = 'PAC_IDPACIENTE'
+      LookupSource = dmPrincipal.dsPacientes
+    end
+  end
+  object Edit2: TEdit[2]
+    Left = 16
+    Height = 23
+    Top = 392
+    Width = 80
+    TabOrder = 2
+    Visible = False
+  end
+  inherited ActionList1: TActionList[3]
+    Left = 664
+    Top = 64
+    inherited act_Novo: TAction
+      OnExecute = act_NovoExecute
+    end
+    inherited act_Alterar: TAction
+      OnExecute = act_AlterarExecute
+    end
+    inherited act_Cancelar: TAction
+      OnExecute = act_CancelarExecute
+    end
+    inherited act_Salvar: TAction
+      OnExecute = act_SalvarExecute
+    end
+    inherited act_Fechar: TAction
+      OnExecute = act_FecharExecute
+    end
+    object act_imprimir: TAction[5]
+      Caption = 'Imprimir'
+      OnExecute = act_imprimirExecute
+    end
+    object act_Consultar: TAction[6]
+      Caption = 'Consultar'
+      OnExecute = act_ConsultarExecute
+    end
+  end
+  inherited ACBrEnterTab1: TACBrEnterTab[4]
+  end
+  object qryImpOrcamentos: TZQuery[5]
+    Connection = dmPrincipal.conexao
+    SQL.Strings = (
+      'Select * from Orcamentos'
+    )
+    Params = <>
+    Left = 168
+    Top = 157
+    object qryImpOrcamentosIDORCAMENTO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDORCAMENTO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryImpOrcamentosIDPACIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDPACIENTE'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryImpOrcamentosORCAM_DATA: TDateField
+      FieldKind = fkData
+      FieldName = 'ORCAM_DATA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryImpOrcamentosORCAM_HORA: TTimeField
+      FieldKind = fkData
+      FieldName = 'ORCAM_HORA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryImpOrcamentosTOTALORCAMENTO: TFloatField
+      FieldKind = fkData
+      FieldName = 'TOTALORCAMENTO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      Precision = 22
+    end
+    object qryImpOrcamentosPAC_NOME: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_NOME'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+  end
+  object qryImpItensOrcamentos: TZQuery[6]
+    Connection = dmPrincipal.conexao
+    SQL.Strings = (
+      'select * from ItensOrcamentos'
+    )
+    Params = <>
+    MasterFields = 'IDORCAMENTO'
+    MasterSource = dsImpOrcamentos
+    LinkedFields = 'IDITENSORCAMENTO'
+    Left = 288
+    Top = 157
+    object qryImpItensOrcamentosIDITEM: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDITEM'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryImpItensOrcamentosIDITENSORCAMENTO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDITENSORCAMENTO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryImpItensOrcamentosPROCED_ID: TLongintField
+      FieldKind = fkData
+      FieldName = 'PROCED_ID'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryImpItensOrcamentosPROCED_VALOR: TFloatField
+      FieldKind = fkData
+      FieldName = 'PROCED_VALOR'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 20
+    end
+    object qryImpItensOrcamentosDATA_ITENORCAMENTO: TDateField
+      FieldKind = fkData
+      FieldName = 'DATA_ITENORCAMENTO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'PROCEDIMENTO'
+      Index = 5
+      KeyFields = 'PROCED_ID'
+      LookupCache = False
+      LookupDataSet = dmPrincipal.qryProcedimentos
+      LookupKeyFields = 'PROCED_ID'
+      LookupResultField = 'PROCEDIMENTO'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+  end
+  object qryImpPacientes: TZQuery[7]
+    Connection = dmPrincipal.conexao
+    SQL.Strings = (
+      'select  * from view_paciente'
+    )
+    Params = <>
+    Left = 416
+    Top = 160
+    object qryImpPacientesIDTRATAMENTOS: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDTRATAMENTOS'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryImpPacientesPAC_IDPACIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'PAC_IDPACIENTE'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryImpPacientesPAC_NOME: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_NOME'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryImpPacientesPAC_DATANASC: TDateField
+      FieldKind = fkData
+      FieldName = 'PAC_DATANASC'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryImpPacientesPAC_CEL: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_CEL'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+    object qryImpPacientesPAC_PROFISSAO: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_PROFISSAO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+  end
+  object qryEmpresa: TZQuery[8]
+    Connection = dmPrincipal.conexao
+    SQL.Strings = (
+      'SELECT EMPRESA_ID, RAZAO_SOC, NOME_FANT, ENDERECO, NUMERO, BAIRRO, MUNICIPIO, CEP, COMPLEMENTO, FONE1, FONE2, EMAIL, SITE, CNPJ, LOGO, DATACAD, FONE3, UF '
+      'FROM hiodonto.empresa;'
+    )
+    Params = <>
+    Left = 544
+    Top = 162
+    object qryEmpresaEMPRESA_ID: TLongintField
+      FieldKind = fkData
+      FieldName = 'EMPRESA_ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryEmpresaRAZAO_SOC: TStringField
+      FieldKind = fkData
+      FieldName = 'RAZAO_SOC'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 60
+    end
+    object qryEmpresaNOME_FANT: TStringField
+      FieldKind = fkData
+      FieldName = 'NOME_FANT'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 60
+    end
+    object qryEmpresaENDERECO: TStringField
+      FieldKind = fkData
+      FieldName = 'ENDERECO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryEmpresaNUMERO: TStringField
+      FieldKind = fkData
+      FieldName = 'NUMERO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryEmpresaBAIRRO: TStringField
+      FieldKind = fkData
+      FieldName = 'BAIRRO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryEmpresaCEP: TStringField
+      FieldKind = fkData
+      FieldName = 'CEP'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object qryEmpresaCOMPLEMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'COMPLEMENTO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryEmpresaFONE1: TStringField
+      FieldKind = fkData
+      FieldName = 'FONE1'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '!\(99\)00000-0000;1;_'
+      Size = 14
+    end
+    object qryEmpresaFONE2: TStringField
+      FieldKind = fkData
+      FieldName = 'FONE2'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '!\(99\)00000-0000;1;_'
+      Size = 14
+    end
+    object qryEmpresaEMAIL: TStringField
+      FieldKind = fkData
+      FieldName = 'EMAIL'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qryEmpresaSITE: TStringField
+      FieldKind = fkData
+      FieldName = 'SITE'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qryEmpresaCNPJ: TStringField
+      FieldKind = fkData
+      FieldName = 'CNPJ'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 25
+    end
+    object qryEmpresaLOGO: TBlobField
+      FieldKind = fkData
+      FieldName = 'LOGO'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryEmpresaDATACAD: TDateField
+      FieldKind = fkData
+      FieldName = 'DATACAD'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryEmpresaFONE3: TStringField
+      FieldKind = fkData
+      FieldName = 'FONE3'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '!\(99\)00000-0000;1;_'
+      Size = 14
+    end
+    object qryEmpresaMUNICIPIO: TStringField
+      FieldKind = fkData
+      FieldName = 'MUNICIPIO'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryEmpresaUF: TStringField
+      FieldKind = fkData
+      FieldName = 'UF'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+  end
+  object frDBOrcamentos: TfrDBDataSet[9]
+    DataSet = qryImpOrcamentos
+    Left = 160
+    Top = 272
+  end
+  object frDBImpItensOrcamentos: TfrDBDataSet[10]
+    DataSet = qryImpItensOrcamentos
+    Left = 288
+    Top = 280
+  end
+  object frDBImpPacientes: TfrDBDataSet[11]
+    DataSet = qryImpPacientes
+    Left = 416
+    Top = 280
+  end
+  object frDBImpEmpresa: TfrDBDataSet[12]
+    DataSet = qryEmpresa
+    Left = 560
+    Top = 288
+  end
+  object dsImpOrcamentos: TDataSource[13]
+    AutoEdit = False
+    DataSet = qryImpOrcamentos
+    Left = 171
+    Top = 218
+  end
+  object dsImpItensOrcamentos: TDataSource[14]
+    AutoEdit = False
+    DataSet = qryImpItensOrcamentos
+    Left = 284
+    Top = 219
+  end
+  object dsImpPacientes: TDataSource[15]
+    AutoEdit = False
+    DataSet = qryImpPacientes
+    Left = 416
+    Top = 219
+  end
+  object dsEmpresa: TDataSource[16]
+    AutoEdit = False
+    DataSet = qryEmpresa
+    Left = 552
+    Top = 219
+  end
+  object frReport1: TfrReport[17]
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    StoreInForm = True
+    DataType = dtDataSet
+    Left = 48
+    Top = 176
+    ReportXML = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<CONFIG>'#13#10'  <LazReport>'#13#10'    <Version Value="31"/>'#13#10'    <Title Value=""/>'#13#10'    <Subject Value=""/>'#13#10'    <KeyWords Value=""/>'#13#10'    <Comments Value=""/>'#13#10'    <ReportCreateDate Value="1899-12-30 00:00:00"/>'#13#10'    <ReportLastChange Value="1899-12-30 00:00:00"/>'#13#10'    <ReportVersionBuild Value=""/>'#13#10'    <ReportVersionMajor Value=""/>'#13#10'    <ReportVersionMinor Value=""/>'#13#10'    <ReportVersionRelease Value=""/>'#13#10'    <ReportAutor Value=""/>'#13#10'    <Script Value=""/>'#13#10'    <Pages>'#13#10'      <PrintToDefault Value="False"/>'#13#10'      <DoublePass Value="False"/>'#13#10'      <SelectedPrinter Value="Microsoft XPS Document Writer"/>'#13#10'      <PageCount Value="0"/>'#13#10'      <FVal>'#13#10'        <Count Value="0"/>'#13#10'      </FVal>'#13#10'      <ParentVars Value=""/>'#13#10'    </Pages>'#13#10'    <DetailReports>'#13#10'      <Count Value="0"/>'#13#10'    </DetailReports>'#13#10'  </LazReport>'#13#10'</CONFIG>'#13#10
+  end
+end

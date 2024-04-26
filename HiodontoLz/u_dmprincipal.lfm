@@ -1,0 +1,2736 @@
+object dmPrincipal: TdmPrincipal
+  OldCreateOrder = False
+  Height = 743
+  HorizontalOffset = 4343
+  VerticalOffset = 43
+  Width = 1331
+  PPI = 144
+  object conexao: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    DisableSavepoints = False
+    HostName = '127.0.0.1'
+    Port = 3306
+    Database = 'hiodonto'
+    User = 'root'
+    Password = 'Rosana69Dias'
+    Protocol = 'mariadb'
+    LibraryLocation = 'C:\lib\x86_64-win64\libmariadb.dll'
+    Left = 84
+    Top = 24
+  end
+  object qryProfissionais: TZQuery
+    Connection = conexao
+    AfterPost = qryProfissionaisAfterPost
+    SQL.Strings = (
+      'Select * from profissionais'
+    )
+    Params = <>
+    Left = 216
+    Top = 132
+    object qryProfissionaisPROFIS_IDPROFISSIONAL: TLongintField
+      FieldKind = fkData
+      FieldName = 'PROFIS_IDPROFISSIONAL'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryProfissionaisPROFIS_CPF: TStringField
+      FieldKind = fkData
+      FieldName = 'PROFIS_CPF'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '000.000.000-00;1'
+    end
+    object qryProfissionaisPROFIS_NOME: TStringField
+      FieldKind = fkData
+      FieldName = 'PROFIS_NOME'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryProfissionaisPROFIS_APELIDO: TStringField
+      FieldKind = fkData
+      FieldName = 'PROFIS_APELIDO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryProfissionaisPROFIS_DATANASC: TDateField
+      FieldKind = fkData
+      FieldName = 'PROFIS_DATANASC'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryProfissionaisPROFIS_ENDERECO: TStringField
+      FieldKind = fkData
+      FieldName = 'PROFIS_ENDERECO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryProfissionaisPROFIS_IDCIDADE: TLongintField
+      FieldKind = fkData
+      FieldName = 'PROFIS_IDCIDADE'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryProfissionaisPROFIS_IDFUNCAO: TLongintField
+      FieldKind = fkData
+      FieldName = 'PROFIS_IDFUNCAO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryProfissionaisPROFIS_CEL: TStringField
+      FieldKind = fkData
+      FieldName = 'PROFIS_CEL'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '!\(99\)00000-0000;1;_'
+      Size = 14
+    end
+    object qryProfissionaisPROFIS_EMAIL: TStringField
+      FieldKind = fkData
+      FieldName = 'PROFIS_EMAIL'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qryProfissionaisPROFIS_DATACAD: TDateField
+      FieldKind = fkData
+      FieldName = 'PROFIS_DATACAD'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryProfissionaisPROFIS_CEP: TStringField
+      FieldKind = fkData
+      FieldName = 'PROFIS_CEP'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryProfissionaisPROFIS_BAIRRO: TStringField
+      FieldKind = fkData
+      FieldName = 'PROFIS_BAIRRO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryProfissionaisPROFIS_FOTO: TBlobField
+      FieldKind = fkData
+      FieldName = 'PROFIS_FOTO'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryProfissionaisPROFIS_CRO: TStringField
+      FieldKind = fkData
+      FieldName = 'PROFIS_CRO'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryProfissionaisPROFIS_MUNICIPIO: TStringField
+      FieldKind = fkData
+      FieldName = 'PROFIS_MUNICIPIO'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+  end
+  object qryConvenio: TZQuery
+    Connection = conexao
+    AfterPost = qryConvenioAfterPost
+    SQL.Strings = (
+      'select * from convenios'
+    )
+    Params = <>
+    Left = 360
+    Top = 132
+    object qryConvenioIDCONVENIO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDCONVENIO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryConvenioCONVENIO: TStringField
+      FieldKind = fkData
+      FieldName = 'CONVENIO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryConvenioCONVENIO_DATA: TDateField
+      FieldKind = fkData
+      FieldName = 'CONVENIO_DATA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object qryEmpresa: TZQuery
+    Connection = conexao
+    AfterPost = qryEmpresaAfterPost
+    SQL.Strings = (
+      'SELECT EMPRESA_ID, RAZAO_SOC, NOME_FANT, ENDERECO, NUMERO, BAIRRO, MUNICIPIO, CEP, COMPLEMENTO, FONE1, FONE2, EMAIL, SITE, CNPJ, LOGO, DATACAD, FONE3, UF '
+      'FROM hiodonto.empresa;'
+    )
+    Params = <>
+    Left = 516
+    Top = 132
+    object qryEmpresaEMPRESA_ID: TLongintField
+      FieldKind = fkData
+      FieldName = 'EMPRESA_ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryEmpresaRAZAO_SOC: TStringField
+      FieldKind = fkData
+      FieldName = 'RAZAO_SOC'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 60
+    end
+    object qryEmpresaNOME_FANT: TStringField
+      FieldKind = fkData
+      FieldName = 'NOME_FANT'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 60
+    end
+    object qryEmpresaENDERECO: TStringField
+      FieldKind = fkData
+      FieldName = 'ENDERECO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryEmpresaNUMERO: TStringField
+      FieldKind = fkData
+      FieldName = 'NUMERO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryEmpresaBAIRRO: TStringField
+      FieldKind = fkData
+      FieldName = 'BAIRRO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryEmpresaCEP: TStringField
+      FieldKind = fkData
+      FieldName = 'CEP'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '00000-000;1;_'
+      Size = 10
+    end
+    object qryEmpresaCOMPLEMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'COMPLEMENTO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryEmpresaEMAIL: TStringField
+      FieldKind = fkData
+      FieldName = 'EMAIL'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qryEmpresaSITE: TStringField
+      FieldKind = fkData
+      FieldName = 'SITE'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qryEmpresaCNPJ: TStringField
+      FieldKind = fkData
+      FieldName = 'CNPJ'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '99.999.999/9999-99;0'
+      Size = 25
+    end
+    object qryEmpresaLOGO: TBlobField
+      FieldKind = fkData
+      FieldName = 'LOGO'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryEmpresaDATACAD: TDateField
+      FieldKind = fkData
+      FieldName = 'DATACAD'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryEmpresaFONE1: TStringField
+      FieldKind = fkData
+      FieldName = 'FONE1'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '!\(99\)00000-0000;1;_'
+      Size = 14
+    end
+    object qryEmpresaFONE2: TStringField
+      FieldKind = fkData
+      FieldName = 'FONE2'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '!\(99\)00000-0000;1;_'
+      Size = 14
+    end
+    object qryEmpresaFONE3: TStringField
+      FieldKind = fkData
+      FieldName = 'FONE3'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '!\(99\)00000-0000;1;_'
+      Size = 14
+    end
+    object qryEmpresaMUNICIPIO: TStringField
+      FieldKind = fkData
+      FieldName = 'MUNICIPIO'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryEmpresaUF: TStringField
+      FieldKind = fkData
+      FieldName = 'UF'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+  end
+  object qryProcedimentos: TZQuery
+    Connection = conexao
+    AfterPost = qryProcedimentosAfterPost
+    SQL.Strings = (
+      'select * from procedimentos'
+    )
+    Params = <>
+    Left = 72
+    Top = 360
+    object qryProcedimentosPROCED_ID: TLongintField
+      FieldKind = fkData
+      FieldName = 'PROCED_ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryProcedimentosPROCEDIMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'PROCEDIMENTO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryProcedimentosPROCED_DATA: TDateField
+      FieldKind = fkData
+      FieldName = 'PROCED_DATA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryProcedimentosVALOR: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      Precision = 20
+    end
+  end
+  object qryPerfil: TZQuery
+    Connection = conexao
+    AfterPost = qryPerfilAfterPost
+    SQL.Strings = (
+      'SELECT PERFIL_ID, PER_STATUS, PER_MARCA, PER_DATA_ALT, PER_DATA_INC, PER_DATA_HAB, PER_OCULTAR, PER_CADPAC, PER_CADPROF, PER_PROC, PER_CADPROD, PER_CAIXA, PER_AGENDA, PER_CONTAPAG, PER_CONTAREG, PER_CADTRATAM, PER_CADCONVENIO, PER_CADORCAMENTO, PER_CADPROCEDIMENTO, PER_CADPERFIL, PER_CADUSUARIOS, PER_NIVEL, PER_NIVELDESCRICAO, PER_CADEMPRESA, PER_CADGERENTES, PER_CADDEPARTAMENTO, PER_MOVIMENTO, PER_TIPOCONTATO '
+      'FROM hiodonto.perfil;'
+    )
+    Params = <>
+    Left = 1008
+    Top = 144
+    object qryPerfilPERFIL_ID: TLongintField
+      FieldKind = fkData
+      FieldName = 'PERFIL_ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryPerfilPER_STATUS: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_STATUS'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_MARCA: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_MARCA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_DATA_ALT: TDateField
+      FieldKind = fkData
+      FieldName = 'PER_DATA_ALT'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPerfilPER_DATA_INC: TDateField
+      FieldKind = fkData
+      FieldName = 'PER_DATA_INC'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPerfilPER_DATA_HAB: TDateField
+      FieldKind = fkData
+      FieldName = 'PER_DATA_HAB'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPerfilPER_OCULTAR: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_OCULTAR'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADPAC: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADPAC'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADPROF: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADPROF'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_PROC: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_PROC'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADPROD: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADPROD'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CAIXA: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CAIXA'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_AGENDA: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_AGENDA'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CONTAPAG: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CONTAPAG'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CONTAREG: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CONTAREG'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADTRATAM: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADTRATAM'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADCONVENIO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADCONVENIO'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADORCAMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADORCAMENTO'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADPROCEDIMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADPROCEDIMENTO'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADPERFIL: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADPERFIL'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADUSUARIOS: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADUSUARIOS'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_NIVEL: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_NIVEL'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_NIVELDESCRICAO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_NIVELDESCRICAO'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryPerfilPER_CADEMPRESA: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADEMPRESA'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADGERENTES: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADGERENTES'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_CADDEPARTAMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADDEPARTAMENTO'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_MOVIMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_MOVIMENTO'
+      Index = 26
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryPerfilPER_TIPOCONTATO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_TIPOCONTATO'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+  end
+  object qryTratamentos: TZQuery
+    Connection = conexao
+    AfterPost = qryTratamentosAfterPost
+    SQL.Strings = (
+      'Select * from tratamentos'
+    )
+    Params = <>
+    Left = 300
+    Top = 372
+    object qryTratamentosIDTRATAMENTOS: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDTRATAMENTOS'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryTratamentosTRATAM_DATA: TDateField
+      FieldKind = fkData
+      FieldName = 'TRATAM_DATA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryTratamentosHORA: TTimeField
+      FieldKind = fkData
+      FieldName = 'HORA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryTratamentosPAC_IDPACIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'PAC_IDPACIENTE'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryTratamentosPROFIS_IDPROFISSIONAL: TLongintField
+      FieldKind = fkData
+      FieldName = 'PROFIS_IDPROFISSIONAL'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryTratamentosSITUACAO: TStringField
+      FieldKind = fkData
+      FieldName = 'SITUACAO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryTratamentosTOTALGERAL: TFloatField
+      FieldKind = fkData
+      FieldName = 'TOTALGERAL'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      Precision = 22
+    end
+    object qryTratamentosPAC_NOME: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_NOME'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+  end
+  object qryOrcamentos: TZQuery
+    Connection = conexao
+    AfterPost = qryOrcamentosAfterPost
+    SQL.Strings = (
+      'select * from orcamentos'
+    )
+    Params = <>
+    Left = 480
+    Top = 360
+    object qryOrcamentosIDORCAMENTO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDORCAMENTO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryOrcamentosIDPACIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDPACIENTE'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryOrcamentosORCAM_DATA: TDateField
+      FieldKind = fkData
+      FieldName = 'ORCAM_DATA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryOrcamentosORCAM_HORA: TTimeField
+      FieldKind = fkData
+      FieldName = 'ORCAM_HORA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryOrcamentosTOTALORCAMENTO: TFloatField
+      FieldKind = fkData
+      FieldName = 'TOTALORCAMENTO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      Precision = 22
+    end
+    object qryOrcamentosPAC_NOME: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_NOME'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+  end
+  object qryItenstratamentos: TZQuery
+    Connection = conexao
+    AfterPost = qryItenstratamentosAfterPost
+    SQL.Strings = (
+      'select * from itenstratamentos'
+    )
+    Params = <>
+    MasterFields = 'IDTRATAMENTOS'
+    MasterSource = dsTratamentos
+    LinkedFields = 'IDITEMTRATAMENTO'
+    Left = 300
+    Top = 540
+    object qryItenstratamentosITENS_DATA: TDateField
+      FieldKind = fkData
+      FieldName = 'ITENS_DATA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryItenstratamentosIDPROCEDIMENTO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDPROCEDIMENTO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryItenstratamentosIDDENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDDENTE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryItenstratamentosITTENS_HORA: TTimeField
+      FieldKind = fkData
+      FieldName = 'ITTENS_HORA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryItenstratamentosFACE: TStringField
+      FieldKind = fkData
+      FieldName = 'FACE'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryItenstratamentosPROFIS_IDPROFISSIONAL: TLongintField
+      FieldKind = fkData
+      FieldName = 'PROFIS_IDPROFISSIONAL'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryItenstratamentosSITUACAO: TStringField
+      FieldKind = fkData
+      FieldName = 'SITUACAO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryItenstratamentosPROCED_VALOR: TFloatField
+      FieldKind = fkData
+      FieldName = 'PROCED_VALOR'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      Precision = 22
+    end
+    object StringField1: TStringField
+      DisplayLabel = 'L_PROCEDIMENTO'
+      FieldKind = fkLookup
+      FieldName = 'PROCEDIMENTO'
+      Index = 8
+      KeyFields = 'IDPROCEDIMENTO'
+      LookupCache = False
+      LookupDataSet = qryProcedimentos
+      LookupKeyFields = 'PROCED_ID'
+      LookupResultField = 'PROCEDIMENTO'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object StringField2: TStringField
+      FieldKind = fkLookup
+      FieldName = 'PROFIS_NOME'
+      Index = 9
+      KeyFields = 'PROFIS_IDPROFISSIONAL'
+      LookupCache = False
+      LookupDataSet = qryProfissionais
+      LookupKeyFields = 'PROFIS_CPF'
+      LookupResultField = 'PROFIS_NOME'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object FloatField2: TFloatField
+      FieldKind = fkLookup
+      FieldName = 'VALOR'
+      Index = 10
+      KeyFields = 'IDPROCEDIMENTO'
+      LookupCache = False
+      LookupDataSet = qryProcedimentos
+      LookupKeyFields = 'PROCED_ID'
+      LookupResultField = 'VALOR'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+    end
+    object qryItenstratamentosIDITEM: TLargeintField
+      FieldKind = fkData
+      FieldName = 'IDITEM'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryItenstratamentosIDITEMTRATAMENTO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDITEMTRATAMENTO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object qryItensorcamentos: TZQuery
+    AfterScroll = qryItensorcamentosAfterScroll
+    Connection = conexao
+    AfterPost = qryItensorcamentosAfterPost
+    SQL.Strings = (
+      'select * from itensorcamentos'
+    )
+    Params = <>
+    MasterFields = 'IDORCAMENTO'
+    MasterSource = dsOrcamentos
+    LinkedFields = 'IDITENSORCAMENTO'
+    Left = 480
+    Top = 528
+    object qryItensorcamentosIDITEM: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDITEM'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryItensorcamentosIDITENSORCAMENTO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDITENSORCAMENTO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryItensorcamentosPROCED_ID: TLongintField
+      FieldKind = fkData
+      FieldName = 'PROCED_ID'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryItensorcamentosPROCED_VALOR: TFloatField
+      FieldKind = fkData
+      FieldName = 'PROCED_VALOR'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      Precision = 20
+    end
+    object qryItensorcamentosDATA_ITENORCAMENTO: TDateField
+      FieldKind = fkData
+      FieldName = 'DATA_ITENORCAMENTO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object StringField3: TStringField
+      FieldKind = fkLookup
+      FieldName = 'PROCEDIMENTO'
+      Index = 5
+      KeyFields = 'PROCED_ID'
+      LookupCache = False
+      LookupDataSet = qryProcedimentos
+      LookupKeyFields = 'PROCED_ID'
+      LookupResultField = 'PROCEDIMENTO'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object TFloatField
+      FieldKind = fkLookup
+      FieldName = 'VALOR'
+      Index = 6
+      KeyFields = 'PROCED_ID'
+      LookupCache = False
+      LookupDataSet = qryProcedimentos
+      LookupKeyFields = 'PROCED_ID'
+      LookupResultField = 'VALOR'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+    end
+  end
+  object dsTratamentos: TDataSource
+    AutoEdit = False
+    DataSet = qryTratamentos
+    Left = 300
+    Top = 456
+  end
+  object dsOrcamentos: TDataSource
+    AutoEdit = False
+    DataSet = qryOrcamentos
+    Left = 480
+    Top = 444
+  end
+  object qryTipoContato: TZQuery
+    Connection = conexao
+    AfterPost = qryTipoContatoAfterPost
+    SQL.Strings = (
+      'SELECT IDTIPO_CONTATO, CONTATO '
+      'FROM hiodonto.tipocontato;'
+    )
+    Params = <>
+    Left = 1140
+    Top = 156
+    object qryTipoContatoIDTIPO_CONTATO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDTIPO_CONTATO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryTipoContatoCONTATO: TStringField
+      FieldKind = fkData
+      FieldName = 'CONTATO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+  end
+  object qryConsultatratamentos: TZQuery
+    Connection = conexao
+    SQL.Strings = (
+      'select * from tratamentos'
+    )
+    Params = <>
+    Left = 708
+    Top = 420
+    object qryConsultatratamentosIDTRATAMENTOS: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDTRATAMENTOS'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryConsultatratamentosTRATAM_DATA: TDateField
+      FieldKind = fkData
+      FieldName = 'TRATAM_DATA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryConsultatratamentosHORA: TTimeField
+      FieldKind = fkData
+      FieldName = 'HORA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryConsultatratamentosPAC_IDPACIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'PAC_IDPACIENTE'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryConsultatratamentosPROFIS_IDPROFISSIONAL: TLongintField
+      FieldKind = fkData
+      FieldName = 'PROFIS_IDPROFISSIONAL'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryConsultatratamentosSITUACAO: TStringField
+      FieldKind = fkData
+      FieldName = 'SITUACAO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryConsultatratamentosPAC_NOME: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_NOME'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryConsultatratamentosTOTALGERAL: TFloatField
+      FieldKind = fkData
+      FieldName = 'TOTALGERAL'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 22
+    end
+  end
+  object dsConsultatratamentos: TDataSource
+    AutoEdit = False
+    DataSet = qryConsultatratamentos
+    Left = 708
+    Top = 486
+  end
+  object dsItenstratamentos: TDataSource
+    AutoEdit = False
+    DataSet = qryItenstratamentos
+    Left = 300
+    Top = 612
+  end
+  object dsProcedimentos: TDataSource
+    AutoEdit = False
+    DataSet = qryProcedimentos
+    Left = 71
+    Top = 444
+  end
+  object dsPacientes: TDataSource
+    AutoEdit = False
+    DataSet = qryPacientes
+    Left = 71
+    Top = 228
+  end
+  object dsProfissionais: TDataSource
+    AutoEdit = False
+    DataSet = qryProfissionais
+    Left = 192
+    Top = 228
+  end
+  object dsItensOrcamentos: TDataSource
+    AutoEdit = False
+    DataSet = qryItensorcamentos
+    Left = 480
+    Top = 612
+  end
+  object dsConvenio: TDataSource
+    AutoEdit = False
+    DataSet = qryConvenio
+    Left = 366
+    Top = 228
+  end
+  object dsCidade: TDataSource
+    AutoEdit = False
+    Left = 660
+    Top = 240
+  end
+  object dsEmpresa: TDataSource
+    AutoEdit = False
+    DataSet = qryEmpresa
+    Left = 528
+    Top = 240
+  end
+  object qrySomaTratamento: TZQuery
+    Connection = conexao
+    SQL.Strings = (
+      'select sum(proced_valor)as Subtotal from tratamentos t, itenstratamentos i'
+      'where i.IDITEMTRATAMENTO = t.IDTRATAMENTOS'
+    )
+    Params = <>
+    Left = 876
+    Top = 384
+    object qrySomaTratamentoSubtotal: TFloatField
+      FieldKind = fkData
+      FieldName = 'Subtotal'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Currency = True
+      Precision = 44
+    end
+  end
+  object dsSomaTratamento: TDataSource
+    AutoEdit = False
+    DataSet = qrySomaTratamento
+    Left = 876
+    Top = 468
+  end
+  object qryPacientes: TZQuery
+    Connection = conexao
+    AfterPost = qryPacientesAfterPost
+    SQL.Strings = (
+      'select * from pacientes'
+      ''
+    )
+    Params = <>
+    Left = 72
+    Top = 132
+    object qryPacientesPAC_IDPACIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'PAC_IDPACIENTE'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryPacientesPAC_INSTAGRAM: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_INSTAGRAM'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesPAC_CPFCNPJ: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_CPFCNPJ'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesPAC_NOME: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_NOME'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryPacientesPAC_ANIVERSARIO: TDateField
+      FieldKind = fkData
+      FieldName = 'PAC_ANIVERSARIO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesPAC_ENDERECO: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_ENDERECO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryPacientesPAC_CEP: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_CEP'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 14
+    end
+    object qryPacientesPAC_UF: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_UF'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+    object qryPacientesPAC_CEL: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_CEL'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '!\(99\)00000-0000;1;_'
+      Size = 15
+    end
+    object qryPacientesPAC_EMAIL: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_EMAIL'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qryPacientesPAC_DATACAD: TDateField
+      FieldKind = fkData
+      FieldName = 'PAC_DATACAD'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesPAC_NUMERO: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_NUMERO'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object qryPacientesPAC_BAIRRO: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_BAIRRO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryPacientesPAC_SITUACAO: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_SITUACAO'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object qryPacientesPAC_FACEBOOK: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_FACEBOOK'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object qryPacientesPAC_SEXO: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_SEXO'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object qryPacientesPAC_DATANASC: TDateField
+      FieldKind = fkData
+      FieldName = 'PAC_DATANASC'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesPAC_ESTADOCIVIL: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_ESTADOCIVIL'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+    object qryPacientesPAC_CODIGOAUXILIAR: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_CODIGOAUXILIAR'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesPAC_CODIGO: TLongintField
+      FieldKind = fkData
+      FieldName = 'PAC_CODIGO'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesPAC_INDICADO_POR: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_INDICADO_POR'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryPacientesPAC_CIDADECODIGO: TLongintField
+      FieldKind = fkData
+      FieldName = 'PAC_CIDADECODIGO'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesPAC_MUNICIPIO: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_MUNICIPIO'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryPacientesPAC_COMPLEMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_COMPLEMENTO'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object qryPacientesESTA_EM_TRATAMENTO_MEDICO: TStringField
+      FieldKind = fkData
+      FieldName = 'ESTA_EM_TRATAMENTO_MEDICO'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesQUAL_TRATAMENTO_MEDICO: TStringField
+      FieldKind = fkData
+      FieldName = 'QUAL_TRATAMENTO_MEDICO'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryPacientesJA_TEVE_ALGUMA_DOENCA: TStringField
+      FieldKind = fkData
+      FieldName = 'JA_TEVE_ALGUMA_DOENCA'
+      Index = 26
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryPacientesE_DIABETICO: TStringField
+      FieldKind = fkData
+      FieldName = 'E_DIABETICO'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesSOFRE_DOENCA_CORACAO: TStringField
+      FieldKind = fkData
+      FieldName = 'SOFRE_DOENCA_CORACAO'
+      Index = 28
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesE_HIPERTENSO: TStringField
+      FieldKind = fkData
+      FieldName = 'E_HIPERTENSO'
+      Index = 29
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesE_HEMOFILICO: TStringField
+      FieldKind = fkData
+      FieldName = 'E_HEMOFILICO'
+      Index = 30
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesSEUS_PES_INCHAM: TStringField
+      FieldKind = fkData
+      FieldName = 'SEUS_PES_INCHAM'
+      Index = 31
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesTEM_TOSSE_PERSISTENTE: TStringField
+      FieldKind = fkData
+      FieldName = 'TEM_TOSSE_PERSISTENTE'
+      Index = 32
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesTEM_ALGUM_ALERGIA: TStringField
+      FieldKind = fkData
+      FieldName = 'TEM_ALGUM_ALERGIA'
+      Index = 33
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesQUANDO_FERE: TStringField
+      FieldKind = fkData
+      FieldName = 'QUANDO_FERE'
+      Index = 34
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesJA_SUBMETIDO_ANESTESIA: TStringField
+      FieldKind = fkData
+      FieldName = 'JA_SUBMETIDO_ANESTESIA'
+      Index = 35
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesJA_TEVE_HEMORRAGIA: TStringField
+      FieldKind = fkData
+      FieldName = 'JA_TEVE_HEMORRAGIA'
+      Index = 36
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesTEM_ALGUM_VICIO: TStringField
+      FieldKind = fkData
+      FieldName = 'TEM_ALGUM_VICIO'
+      Index = 37
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesVICIO_QUAL: TStringField
+      FieldKind = fkData
+      FieldName = 'VICIO_QUAL'
+      Index = 38
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryPacientesTOMA_ALGUM_MEDICAMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'TOMA_ALGUM_MEDICAMENTO'
+      Index = 39
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesSOFRE_EPILEPSIA: TStringField
+      FieldKind = fkData
+      FieldName = 'SOFRE_EPILEPSIA'
+      Index = 40
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesTEM_ALGO_DECLARAR: TStringField
+      FieldKind = fkData
+      FieldName = 'TEM_ALGO_DECLARAR'
+      Index = 41
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesPAC_TIPOCONTATO: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_TIPOCONTATO'
+      Index = 42
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesQUAL_DOENCA_CORACAO: TStringField
+      FieldKind = fkData
+      FieldName = 'QUAL_DOENCA_CORACAO'
+      Index = 43
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesQUAL_ALERGIA: TStringField
+      FieldKind = fkData
+      FieldName = 'QUAL_ALERGIA'
+      Index = 44
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesPAC_OBSERVACOES: TBlobField
+      FieldKind = fkData
+      FieldName = 'PAC_OBSERVACOES'
+      Index = 45
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesPAC_IDCONVENIO: TLongintField
+      FieldKind = fkData
+      FieldName = 'PAC_IDCONVENIO'
+      Index = 46
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPacientesESTA_GRAVIDA: TStringField
+      FieldKind = fkData
+      FieldName = 'ESTA_GRAVIDA'
+      Index = 47
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object qryPacientesPAC_PROFISSAO: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_PROFISSAO'
+      Index = 48
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryPacientesQUAL_MEDICAMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'QUAL_MEDICAMENTO'
+      Index = 49
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryPacientesQUAL_DOENCA: TStringField
+      FieldKind = fkData
+      FieldName = 'QUAL_DOENCA'
+      Index = 50
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryPacientesCODIGO_PACIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CODIGO_PACIENTE'
+      Index = 51
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object qryFuncao: TZQuery
+    Connection = conexao
+    AfterPost = qryFuncaoAfterPost
+    SQL.Strings = (
+      'Select * from Funcao'
+    )
+    Params = <>
+    Left = 71
+    Top = 540
+    object qryFuncaoIDFUNCAO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDFUNCAO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryFuncaoFUNCAO: TStringField
+      FieldKind = fkData
+      FieldName = 'FUNCAO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+  end
+  object dsFuncao: TDataSource
+    AutoEdit = False
+    DataSet = qryFuncao
+    Left = 71
+    Top = 624
+  end
+  object qryMovimento: TZQuery
+    OnCalcFields = qryMovimentoCalcFields
+    Connection = conexao
+    AfterPost = qryMovimentoAfterPost
+    SQL.Strings = (
+      'select * from movimento'
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'datainicial'
+        ParamType = ptInput
+        SQLType = stInteger
+      end    
+      item
+        DataType = ftInteger
+        Name = 'datafinal'
+        ParamType = ptInput
+        SQLType = stInteger
+      end>
+    Left = 1032
+    Top = 348
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'datainicial'
+        ParamType = ptInput
+        SQLType = stInteger
+      end    
+      item
+        DataType = ftInteger
+        Name = 'datafinal'
+        ParamType = ptInput
+        SQLType = stInteger
+      end>
+    object qryMovimentoIDMOVIMENTO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDMOVIMENTO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryMovimentoMOV_DATA: TDateField
+      FieldKind = fkData
+      FieldName = 'MOV_DATA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryMovimentoMOV_HORA: TTimeField
+      FieldKind = fkData
+      FieldName = 'MOV_HORA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryMovimentoIDPACIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDPACIENTE'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryMovimentoPAC_NOME: TStringField
+      FieldKind = fkData
+      FieldName = 'PAC_NOME'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryMovimentoTOTALGERAL: TFloatField
+      FieldKind = fkData
+      FieldName = 'TOTALGERAL'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###,###.00'
+      EditFormat = '###,###.00'
+      Precision = 22
+    end
+    object qryMovimentoIDTRATAMENTO: TLongintField
+      FieldKind = fkData
+      FieldName = 'IDTRATAMENTO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryMovimentoVALOR_RESTO: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR_RESTO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Currency = True
+      Precision = 22
+    end
+    object qryMovimentoN_PACELAS: TLongintField
+      FieldKind = fkData
+      FieldName = 'N_PACELAS'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryMovimentoVALOR_RECEBIDO: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR_RECEBIDO'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      Precision = 22
+    end
+    object qryMovimentoMEIO_PAGAMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'MEIO_PAGAMENTO'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryMovimentoC_VALOR_RESTO: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'C_VALOR_RESTO'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryMovimentoSITUACAO: TStringField
+      FieldKind = fkData
+      FieldName = 'SITUACAO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryMovimentoTOTALDIHEIRO: TFloatField
+      FieldKind = fkData
+      FieldName = 'TOTALDIHEIRO'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      Precision = 12
+    end
+    object qryMovimentoTOTALPIX: TFloatField
+      FieldKind = fkData
+      FieldName = 'TOTALPIX'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 12
+    end
+    object qryMovimentoTOTALCARTAODEBITO: TFloatField
+      FieldKind = fkData
+      FieldName = 'TOTALCARTAODEBITO'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 12
+    end
+    object qryMovimentoTOTALCARTAOCREDITO: TFloatField
+      FieldKind = fkData
+      FieldName = 'TOTALCARTAOCREDITO'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 12
+    end
+  end
+  object dsMovimento: TDataSource
+    DataSet = qryMovimento
+    Left = 1032
+    Top = 432
+  end
+  object qrySomatotalGeral: TZQuery
+    Connection = conexao
+    SQL.Strings = (
+      'select sum(totalgeral) as Total_Geral from Movimento'
+    )
+    Params = <>
+    Left = 1056
+    Top = 516
+  end
+  object dsSomaTotalGeral: TDataSource
+    AutoEdit = False
+    DataSet = qrySomatotalGeral
+    Left = 1056
+    Top = 600
+  end
+  object Somacartaodebito: TZQuery
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT SUM(TOTALGERAL) AS Somacartaodebito FROM movimento M'
+      'WHERE M.MEIO_PAGAMENTO = ''Cartão Débito'''
+    )
+    Params = <>
+    Left = 912
+    Top = 564
+    object SomacartaodebitoSomacartaodebito: TFloatField
+      FieldKind = fkData
+      FieldName = 'Somacartaodebito'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Precision = 44
+    end
+  end
+  object dsSomacartaodebito: TDataSource
+    AutoEdit = False
+    DataSet = Somacartaodebito
+    Left = 912
+    Top = 648
+  end
+  object dsLogin: TDataSource
+    AutoEdit = False
+    DataSet = qryLogin
+    Left = 888
+    Top = 276
+  end
+  object qryLogin: TZQuery
+    Connection = conexao
+    AfterPost = qryLoginAfterPost
+    UpdateObject = upLogin
+    SQL.Strings = (
+      'select * from Usuarios, Perfil'
+    )
+    Params = <>
+    Left = 876
+    Top = 144
+    object qryLoginUSU_IDUSUARIO: TLongintField
+      FieldKind = fkData
+      FieldName = 'USU_IDUSUARIO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryLoginUSU_NOME: TStringField
+      FieldKind = fkData
+      FieldName = 'USU_NOME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryLoginUSU_LOGIN: TStringField
+      FieldKind = fkData
+      FieldName = 'USU_LOGIN'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryLoginUSU_SENHA: TStringField
+      FieldKind = fkData
+      FieldName = 'USU_SENHA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryLoginUSU_DATACAD: TDateField
+      FieldKind = fkData
+      FieldName = 'USU_DATACAD'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryLoginUSU_NIVEL: TStringField
+      FieldKind = fkData
+      FieldName = 'USU_NIVEL'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginUSU_DATAALT: TDateField
+      FieldKind = fkData
+      FieldName = 'USU_DATAALT'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryLoginUSU_DATAHAB: TDateField
+      FieldKind = fkData
+      FieldName = 'USU_DATAHAB'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryLoginUSU_MARCA: TStringField
+      FieldKind = fkData
+      FieldName = 'USU_MARCA'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginUSU_DEPARTAMENTO_ID: TLongintField
+      FieldKind = fkData
+      FieldName = 'USU_DEPARTAMENTO_ID'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryLoginPERFIL_ID: TLongintField
+      FieldKind = fkData
+      FieldName = 'PERFIL_ID'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryLoginPER_STATUS: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_STATUS'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_MARCA: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_MARCA'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_DATA_ALT: TDateField
+      FieldKind = fkData
+      FieldName = 'PER_DATA_ALT'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryLoginPER_DATA_INC: TDateField
+      FieldKind = fkData
+      FieldName = 'PER_DATA_INC'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryLoginPER_DATA_HAB: TDateField
+      FieldKind = fkData
+      FieldName = 'PER_DATA_HAB'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryLoginPER_OCULTAR: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_OCULTAR'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADPAC: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADPAC'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADPROF: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADPROF'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_PROC: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_PROC'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADPROD: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADPROD'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CAIXA: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CAIXA'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_AGENDA: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_AGENDA'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CONTAPAG: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CONTAPAG'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CONTAREG: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CONTAREG'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADTRATAM: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADTRATAM'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADCONVENIO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADCONVENIO'
+      Index = 26
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADORCAMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADORCAMENTO'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADPROCEDIMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADPROCEDIMENTO'
+      Index = 28
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADPERFIL: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADPERFIL'
+      Index = 29
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADUSUARIOS: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADUSUARIOS'
+      Index = 30
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_NIVEL: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_NIVEL'
+      Index = 31
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_NIVELDESCRICAO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_NIVELDESCRICAO'
+      Index = 32
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryLoginPER_CADEMPRESA: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADEMPRESA'
+      Index = 33
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADGERENTES: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADGERENTES'
+      Index = 34
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_CADDEPARTAMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_CADDEPARTAMENTO'
+      Index = 35
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_MOVIMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_MOVIMENTO'
+      Index = 36
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryLoginPER_TIPOCONTATO: TStringField
+      FieldKind = fkData
+      FieldName = 'PER_TIPOCONTATO'
+      Index = 37
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+  end
+  object upLogin: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM `Usuarios`'
+      'WHERE'
+      '  `Usuarios`.`USU_IDUSUARIO` = :OLD_`USU_IDUSUARIO`'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO `Usuarios`'
+      '  (`USU_NOME`, `USU_LOGIN`, `USU_SENHA`, `USU_DATACAD`, `USU_NIVEL`, `USU_DATAALT`, '
+      '   `USU_DATAHAB`, `USU_MARCA`, `USU_DEPARTAMENTO_ID`)'
+      'VALUES'
+      '  (:USU_NOME, :USU_LOGIN, :USU_SENHA, :USU_DATACAD, :USU_NIVEL, :USU_DATAALT, '
+      '   :USU_DATAHAB, :USU_MARCA, :USU_DEPARTAMENTO_ID)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE `Usuarios` SET'
+      '  `USU_NOME` = :USU_NOME,'
+      '  `USU_LOGIN` = :USU_LOGIN,'
+      '  `USU_SENHA` = :USU_SENHA,'
+      '  `USU_DATACAD` = :USU_DATACAD,'
+      '  `USU_NIVEL` = :USU_NIVEL,'
+      '  `USU_DATAALT` = :USU_DATAALT,'
+      '  `USU_DATAHAB` = :USU_DATAHAB,'
+      '  `USU_MARCA` = :USU_MARCA,'
+      '  `USU_DEPARTAMENTO_ID` = :USU_DEPARTAMENTO_ID'
+      'WHERE'
+      '  `Usuarios`.`USU_IDUSUARIO` = :OLD_`USU_IDUSUARIO`'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 876
+    Top = 216
+    ParamData = <    
+      item
+        Name = 'USU_NOME'
+      end    
+      item
+        Name = 'USU_LOGIN'
+      end    
+      item
+        Name = 'USU_SENHA'
+      end    
+      item
+        Name = 'USU_DATACAD'
+      end    
+      item
+        Name = 'USU_NIVEL'
+      end    
+      item
+        Name = 'USU_DATAALT'
+      end    
+      item
+        Name = 'USU_DATAHAB'
+      end    
+      item
+        Name = 'USU_MARCA'
+      end    
+      item
+        Name = 'USU_DEPARTAMENTO_ID'
+      end    
+      item
+        Name = 'OLD_'
+      end>
+  end
+  object qryGerentes: TZQuery
+    Connection = conexao
+    Params = <>
+    Left = 656
+    Top = 590
+  end
+  object dsGerentes: TDataSource
+    AutoEdit = False
+    DataSet = qryGerentes
+    Left = 656
+    Top = 668
+  end
+  object qryUsuarios: TZQuery
+    Connection = conexao
+    AfterPost = qryUsuariosAfterPost
+    SQL.Strings = (
+      'SELECT USU_IDUSUARIO, USU_NOME, USU_LOGIN, USU_SENHA, USU_DATACAD, USU_NIVEL, USU_DATAALT, USU_DATAHAB, USU_MARCA, USU_DEPARTAMENTO_ID '
+      'FROM Usuarios'
+    )
+    Params = <>
+    Left = 768
+    Top = 144
+    object qryUsuariosUSU_IDUSUARIO: TLongintField
+      FieldKind = fkData
+      FieldName = 'USU_IDUSUARIO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryUsuariosUSU_NOME: TStringField
+      FieldKind = fkData
+      FieldName = 'USU_NOME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryUsuariosUSU_LOGIN: TStringField
+      FieldKind = fkData
+      FieldName = 'USU_LOGIN'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryUsuariosUSU_SENHA: TStringField
+      FieldKind = fkData
+      FieldName = 'USU_SENHA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryUsuariosUSU_DATACAD: TDateField
+      FieldKind = fkData
+      FieldName = 'USU_DATACAD'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryUsuariosUSU_NIVEL: TStringField
+      FieldKind = fkData
+      FieldName = 'USU_NIVEL'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryUsuariosUSU_DATAALT: TDateField
+      FieldKind = fkData
+      FieldName = 'USU_DATAALT'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryUsuariosUSU_DATAHAB: TDateField
+      FieldKind = fkData
+      FieldName = 'USU_DATAHAB'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryUsuariosUSU_MARCA: TStringField
+      FieldKind = fkData
+      FieldName = 'USU_MARCA'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qryUsuariosUSU_DEPARTAMENTO_ID: TLongintField
+      FieldKind = fkData
+      FieldName = 'USU_DEPARTAMENTO_ID'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object dsUsuarios: TDataSource
+    AutoEdit = False
+    DataSet = qryUsuarios
+    Left = 768
+    Top = 228
+  end
+  object dsPerfil: TDataSource
+    AutoEdit = False
+    DataSet = qryPerfil
+    Left = 1020
+    Top = 228
+  end
+  object dsTipoContato: TDataSource
+    AutoEdit = False
+    DataSet = qryTipoContato
+    Left = 1152
+    Top = 240
+  end
+end

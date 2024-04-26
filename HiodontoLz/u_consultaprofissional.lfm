@@ -1,0 +1,179 @@
+inherited F_consultaProfissional: TF_consultaProfissional
+  Left = 325
+  Top = 315
+  Width = 764
+  Caption = 'Consulta Profissional'
+  ClientWidth = 764
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited Panel1: TPanel
+    Width = 764
+    ClientWidth = 764
+  end
+  inherited EdtCon: TEdit
+    Top = 25
+    Width = 598
+    OnEnter = act_pesquisarExecute
+  end
+  inherited Label4: TLabel
+    Top = 7
+  end
+  inherited Label5: TLabel
+    Top = 7
+  end
+  inherited Cbpesq: TComboBox
+    Top = 25
+    ItemIndex = 0
+    Items.Strings = (
+      'Todos'
+      'Código'
+      'Profissional'
+    )
+    Text = 'Todos'
+  end
+  object RxDBGrid1: TRxDBGrid[5]
+    Left = 16
+    Height = 312
+    Top = 56
+    Width = 720
+    ColumnDefValues.BlobText = '(blob)'
+    TitleButtons = False
+    AutoSort = True
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Cód. Prof.:'
+        FieldName = 'PROFIS_IDPROFISSIONAL'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Profissional:'
+        Width = 350
+        FieldName = 'PROFIS_NOME'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Apelido:'
+        Width = 120
+        FieldName = 'PROFIS_APELIDO'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Celular:'
+        Width = 120
+        FieldName = 'PROFIS_CEL'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end>
+    KeyStrokes = <    
+      item
+        Command = rxgcShowFindDlg
+        ShortCut = 16454
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowColumnsDlg
+        ShortCut = 16471
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowFilterDlg
+        ShortCut = 16468
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowSortDlg
+        ShortCut = 16467
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowQuickFilter
+        ShortCut = 16465
+        Enabled = True
+      end    
+      item
+        Command = rxgcHideQuickFilter
+        ShortCut = 16456
+        Enabled = True
+      end    
+      item
+        Command = rxgcSelectAll
+        ShortCut = 16449
+        Enabled = True
+      end    
+      item
+        Command = rxgcDeSelectAll
+        ShortCut = 16429
+        Enabled = True
+      end    
+      item
+        Command = rxgcInvertSelection
+        ShortCut = 16426
+        Enabled = True
+      end    
+      item
+        Command = rxgcOptimizeColumnsWidth
+        ShortCut = 16427
+        Enabled = True
+      end    
+      item
+        Command = rxgcCopyCellValue
+        ShortCut = 16451
+        Enabled = True
+      end>
+    FooterOptions.DrawFullLine = False
+    SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+    SearchOptions.FromStart = False
+    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+    AlternateColor = clMoneyGreen
+    Color = clWindow
+    DrawFullLine = False
+    FocusColor = clRed
+    SelectedColor = clHighlight
+    DataSource = dmPrincipal.dsProfissionais
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 3
+  end
+  inherited ActionList1: TActionList[6]
+    Left = 552
+    Top = 8
+    inherited act_pesquisar: TAction
+      OnExecute = act_pesquisarExecute
+      ShortCut = 13
+    end
+  end
+end

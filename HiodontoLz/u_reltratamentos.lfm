@@ -1,0 +1,8 @@
+object RelTratamentos: TRelTratamentos
+  Left = 319
+  Height = 521
+  Top = 283
+  Width = 1051
+  Caption = 'Relatório'
+  LCLVersion = '2.2.4.0'
+end

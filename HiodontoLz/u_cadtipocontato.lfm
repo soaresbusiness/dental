@@ -1,0 +1,225 @@
+inherited F_CadTipoContato: TF_CadTipoContato
+  Height = 285
+  Width = 484
+  Caption = 'Tipo de Contato:'
+  ClientHeight = 285
+  ClientWidth = 484
+  Font.Color = clWindowText
+  OnShow = FormShow
+  inherited Panel1: TPanel
+    Top = 228
+    Width = 484
+    ClientWidth = 484
+    inherited botaoFechar: TBitBtn
+      Left = 381
+    end
+  end
+  inherited Panel2: TPanel
+    Height = 228
+    Width = 484
+    ClientHeight = 228
+    ClientWidth = 484
+    object PageControl1: TPageControl[0]
+      Left = 0
+      Height = 168
+      Top = 8
+      Width = 456
+      ActivePage = TabSheet1
+      TabIndex = 0
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'Consulta'
+        ClientHeight = 140
+        ClientWidth = 448
+        object RxDBGrid1: TRxDBGrid
+          Left = 0
+          Height = 140
+          Top = 0
+          Width = 448
+          ColumnDefValues.BlobText = '(blob)'
+          TitleButtons = False
+          AutoSort = True
+          Columns = <          
+            item
+              Title.Alignment = taCenter
+              Title.Orientation = toHorizontal
+              Title.Caption = 'Código:'
+              FieldName = 'IDTIPO_CONTATO'
+              EditButtons = <>
+              Filter.DropDownRows = 0
+              Filter.EmptyValue = '(Empty)'
+              Filter.NotEmptyValue = '(Não está vazio)'
+              Filter.AllValue = '(Todos os valores)'
+              Filter.EmptyFont.Style = [fsItalic]
+              Filter.ItemIndex = -1
+              Footers = <>
+            end          
+            item
+              Title.Alignment = taLeftJustify
+              Title.Orientation = toHorizontal
+              Title.Caption = 'Tipo de Contato:'
+              Width = 300
+              FieldName = 'CONTATO'
+              EditButtons = <>
+              Filter.DropDownRows = 0
+              Filter.EmptyValue = '(Empty)'
+              Filter.NotEmptyValue = '(Não está vazio)'
+              Filter.AllValue = '(Todos os valores)'
+              Filter.EmptyFont.Style = [fsItalic]
+              Filter.ItemIndex = -1
+              Footers = <>
+            end>
+          KeyStrokes = <          
+            item
+              Command = rxgcShowFindDlg
+              ShortCut = 16454
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowColumnsDlg
+              ShortCut = 16471
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowFilterDlg
+              ShortCut = 16468
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowSortDlg
+              ShortCut = 16467
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowQuickFilter
+              ShortCut = 16465
+              Enabled = True
+            end          
+            item
+              Command = rxgcHideQuickFilter
+              ShortCut = 16456
+              Enabled = True
+            end          
+            item
+              Command = rxgcSelectAll
+              ShortCut = 16449
+              Enabled = True
+            end          
+            item
+              Command = rxgcDeSelectAll
+              ShortCut = 16429
+              Enabled = True
+            end          
+            item
+              Command = rxgcInvertSelection
+              ShortCut = 16426
+              Enabled = True
+            end          
+            item
+              Command = rxgcOptimizeColumnsWidth
+              ShortCut = 16427
+              Enabled = True
+            end          
+            item
+              Command = rxgcCopyCellValue
+              ShortCut = 16451
+              Enabled = True
+            end>
+          FooterOptions.DrawFullLine = False
+          SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+          SearchOptions.FromStart = False
+          OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+          Align = alClient
+          Color = clWindow
+          DrawFullLine = False
+          FocusColor = clRed
+          SelectedColor = clHighlight
+          DataSource = dmPrincipal.dsTipoContato
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          TabOrder = 0
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Dados'
+        ClientHeight = 140
+        ClientWidth = 448
+        object DBEdit1: TDBEdit
+          Left = 8
+          Height = 23
+          Top = 24
+          Width = 80
+          DataField = 'IDTIPO_CONTATO'
+          DataSource = dmPrincipal.dsTipoContato
+          ReadOnly = True
+          MaxLength = 0
+          TabOrder = 1
+          TabStop = False
+        end
+        object DBEdit2: TDBEdit
+          Left = 96
+          Height = 23
+          Top = 23
+          Width = 256
+          DataField = 'CONTATO'
+          DataSource = dmPrincipal.dsTipoContato
+          MaxLength = 0
+          TabOrder = 0
+        end
+        object Label1: TLabel
+          Left = 8
+          Height = 15
+          Top = 8
+          Width = 41
+          Caption = 'Código:'
+          ParentColor = False
+        end
+        object Label2: TLabel
+          Left = 93
+          Height = 15
+          Top = 6
+          Width = 91
+          Caption = 'Tipo de Contato:'
+          ParentColor = False
+        end
+      end
+    end
+    object DBNavigator1: TDBNavigator[1]
+      Left = 8
+      Height = 25
+      Top = 184
+      Width = 241
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 25
+      ClientWidth = 241
+      DataSource = dmPrincipal.dsTipoContato
+      Options = []
+      TabOrder = 1
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    end
+  end
+  inherited ActionList1: TActionList
+    Left = 424
+    inherited act_Novo: TAction
+      OnExecute = act_NovoExecute
+    end
+    inherited act_Alterar: TAction
+      OnExecute = act_AlterarExecute
+    end
+    inherited act_Cancelar: TAction
+      OnExecute = act_CancelarExecute
+    end
+    inherited act_Salvar: TAction
+      OnExecute = act_SalvarExecute
+    end
+  end
+  inherited ACBrEnterTab1: TACBrEnterTab
+    Left = 424
+    Top = 88
+  end
+end

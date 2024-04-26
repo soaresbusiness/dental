@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="Hiodontolz.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="15"/>
+        <CursorPos Y="30"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_principal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_principal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_Principal"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23" Y="9"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_formpadrao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_Padrao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_formPadrao"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadpacientes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadPaciente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadPacientes"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="206"/>
+        <CursorPos X="10" Y="219"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadconvenio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_CadConvenio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="5" Y="55"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadprofissionais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadProfissionais"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="166"/>
+        <CursorPos X="47" Y="190"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadtratamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadTratamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadTratamentos"/>
+        <TopLine Value="385"/>
+        <CursorPos X="30" Y="403"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadprocedimentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadProcedimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadProcedimentos"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="123"/>
+        <CursorPos X="39" Y="144"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultapadrao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_consultaPadrao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultapaciente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_ConsultaPaciente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="52"/>
+        <CursorPos Y="58"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadempresa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadEmpresa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadEmpresa"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="145"/>
+        <CursorPos X="5" Y="163"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_dente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_dente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="223"/>
+        <CursorPos X="63" Y="231"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultaprocedimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_consultaProcedimentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="77"/>
+        <CursorPos X="54" Y="87"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultaprofissional.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_consultaProfissional"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="63" Y="47"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_dmprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="362"/>
+        <CursorPos Y="362"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultatratamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_consultaTratamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="49"/>
+        <CursorPos X="39" Y="53"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadorcamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadOrcamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadOrcamentos"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="291"/>
+        <CursorPos X="3" Y="297"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultaorcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_ConsultaOrcamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_consultaOrcamento"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="48"/>
+        <CursorPos X="40" Y="118"/>
+        <UsageCount Value="203"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_movimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_Movimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_Movimento"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="148"/>
+        <CursorPos Y="157"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_relatoriomovimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRel_Movimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_RelatorioMovimento"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="30"/>
+        <UsageCount Value="200"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_login.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_login"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="64"/>
+        <CursorPos X="3" Y="66"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadgerente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadUsuarios"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadGerente"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="2" Y="21"/>
+        <UsageCount Value="190"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_cadUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="92"/>
+        <CursorPos X="30" Y="113"/>
+        <UsageCount Value="186"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadperfil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_Perfil"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadPerfil"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="109"/>
+        <CursorPos X="25" Y="119"/>
+        <UsageCount Value="181"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadtipocontato.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_CadTipoContato"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_cadTipocontato"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="59"/>
+        <CursorPos X="48" Y="66"/>
+        <UsageCount Value="125"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_consultapacientetratamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_ConsultaPacienteTratamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_consultaPacientetratamento"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="21"/>
+        <CursorPos X="15" Y="45"/>
+        <UsageCount Value="72"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadempresa.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus2.2.0\fpc\3.2.2\source\rtl\objpas\classes\stringl.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="795"/>
+        <CursorPos X="20" Y="808"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Hiodontolz.lpi"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="4"/>
+        <DefaultSyntaxHighlighter Value="XML"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\palmunits\src\control.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="158"/>
+        <CursorPos X="20" Y="186"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\Franklin\AppData\Local\lazarus\onlinepackagemanager\packages\OnGuard\source\lcl\qonguard2.pas"/>
+        <ComponentName Value="CodeGenerateFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="42"/>
+        <CursorPos X="23" Y="54"/>
+        <UsageCount Value="1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\acbr\Fontes\ACBrTCP\ACBrCEP.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="142"/>
+        <CursorPos X="16" Y="133"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_reltratamentos.pas"/>
+        <ComponentName Value="RelTratamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_relTratamentos"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="33" Y="14"/>
+        <UsageCount Value="8"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="u_dmprincipal.pas"/>
+        <Caret Line="306" TopLine="306"/>
+      </Position>
+      <Position>
+        <Filename Value="u_dmprincipal.pas"/>
+        <Caret Line="305" TopLine="305"/>
+      </Position>
+      <Position>
+        <Filename Value="u_dmprincipal.pas"/>
+        <Caret Line="304" TopLine="304"/>
+      </Position>
+      <Position>
+        <Filename Value="u_dmprincipal.pas"/>
+        <Caret Line="303" TopLine="303"/>
+      </Position>
+      <Position>
+        <Filename Value="u_dmprincipal.pas"/>
+        <Caret Line="302" TopLine="302"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="313" Column="10" TopLine="299"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="312" Column="10" TopLine="298"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="311" Column="10" TopLine="297"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="310" Column="10" TopLine="296"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="309" Column="10" TopLine="295"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="266" Column="11" TopLine="253"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="269" Column="44" TopLine="254"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="270" Column="44" TopLine="255"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="271" Column="44" TopLine="256"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="272" Column="44" TopLine="257"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="270" Column="45" TopLine="251"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="269" Column="45" TopLine="250"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="271" Column="11" TopLine="258"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="272" Column="11" TopLine="259"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="271" Column="11" TopLine="258"/>
+      </Position>
+      <Position>
+        <Filename Value="u_dmprincipal.pas"/>
+        <Caret Line="354" TopLine="354"/>
+      </Position>
+      <Position>
+        <Filename Value="u_dmprincipal.pas"/>
+        <Caret Line="365" Column="29" TopLine="353"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadpacientes.pas"/>
+        <Caret Line="328" Column="52" TopLine="315"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadtratamentos.pas"/>
+        <Caret Line="404" Column="30" TopLine="383"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadtratamentos.pas"/>
+        <Caret Line="387" Column="5" TopLine="383"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadtratamentos.pas"/>
+        <Caret Line="401" Column="57" TopLine="383"/>
+      </Position>
+      <Position>
+        <Filename Value="u_login.pas"/>
+        <Caret Line="8" Column="22"/>
+      </Position>
+      <Position>
+        <Filename Value="u_login.pas"/>
+        <Caret Line="66" Column="3" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="u_login.pas"/>
+        <Caret Line="65" Column="3" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="u_dente.pas"/>
+        <Caret Line="231" Column="63" TopLine="223"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
+    <HistoryLists>
+      <List Name="LaunchingApplication" Type="File" Count="1">
+        <Item1 Value="C:\Windows\system32\cmd.exe /C ${TargetCmdLine}"/>
+      </List>
+    </HistoryLists>
+  </ProjectSession>
+</CONFIG>

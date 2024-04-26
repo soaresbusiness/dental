@@ -1,0 +1,346 @@
+inherited F_cadUsuario: TF_cadUsuario
+  Left = 395
+  Height = 348
+  Top = 242
+  Width = 604
+  Caption = 'Cadastro de Usuários'
+  ClientHeight = 348
+  ClientWidth = 604
+  OnShow = FormShow
+  inherited Panel1: TPanel
+    Top = 291
+    Width = 604
+    ClientWidth = 604
+    inherited botaoFechar: TBitBtn
+      Left = 384
+    end
+  end
+  inherited Panel2: TPanel
+    Height = 291
+    Width = 604
+    ClientHeight = 291
+    ClientWidth = 604
+    object PageControl1: TPageControl[0]
+      Left = 8
+      Height = 216
+      Top = 8
+      Width = 560
+      ActivePage = TabSheet2
+      TabIndex = 1
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'Consulta'
+        ClientHeight = 188
+        ClientWidth = 552
+        object RxDBGrid1: TRxDBGrid
+          Left = 0
+          Height = 188
+          Top = 0
+          Width = 552
+          ColumnDefValues.BlobText = '(blob)'
+          TitleButtons = False
+          AutoSort = True
+          Columns = <          
+            item
+              Title.Alignment = taCenter
+              Title.Orientation = toHorizontal
+              Title.Caption = 'Cód. Usuários'
+              FieldName = 'USU_IDUSUARIO'
+              EditButtons = <>
+              Filter.DropDownRows = 0
+              Filter.EmptyValue = '(Empty)'
+              Filter.NotEmptyValue = '(Não está vazio)'
+              Filter.AllValue = '(Todos os valores)'
+              Filter.EmptyFont.Style = [fsItalic]
+              Filter.ItemIndex = -1
+              Footers = <>
+            end          
+            item
+              Title.Alignment = taCenter
+              Title.Orientation = toHorizontal
+              Title.Caption = 'Usuário'
+              Width = 200
+              FieldName = 'USU_NOME'
+              EditButtons = <>
+              Filter.DropDownRows = 0
+              Filter.EmptyValue = '(Empty)'
+              Filter.NotEmptyValue = '(Não está vazio)'
+              Filter.AllValue = '(Todos os valores)'
+              Filter.EmptyFont.Style = [fsItalic]
+              Filter.ItemIndex = -1
+              Footers = <>
+            end          
+            item
+              Title.Alignment = taCenter
+              Title.Orientation = toHorizontal
+              Title.Caption = 'Login'
+              FieldName = 'USU_LOGIN'
+              EditButtons = <>
+              Filter.DropDownRows = 0
+              Filter.EmptyValue = '(Empty)'
+              Filter.NotEmptyValue = '(Não está vazio)'
+              Filter.AllValue = '(Todos os valores)'
+              Filter.EmptyFont.Style = [fsItalic]
+              Filter.ItemIndex = -1
+              Footers = <>
+            end>
+          KeyStrokes = <          
+            item
+              Command = rxgcShowFindDlg
+              ShortCut = 16454
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowColumnsDlg
+              ShortCut = 16471
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowFilterDlg
+              ShortCut = 16468
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowSortDlg
+              ShortCut = 16467
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowQuickFilter
+              ShortCut = 16465
+              Enabled = True
+            end          
+            item
+              Command = rxgcHideQuickFilter
+              ShortCut = 16456
+              Enabled = True
+            end          
+            item
+              Command = rxgcSelectAll
+              ShortCut = 16449
+              Enabled = True
+            end          
+            item
+              Command = rxgcDeSelectAll
+              ShortCut = 16429
+              Enabled = True
+            end          
+            item
+              Command = rxgcInvertSelection
+              ShortCut = 16426
+              Enabled = True
+            end          
+            item
+              Command = rxgcOptimizeColumnsWidth
+              ShortCut = 16427
+              Enabled = True
+            end          
+            item
+              Command = rxgcCopyCellValue
+              ShortCut = 16451
+              Enabled = True
+            end>
+          FooterOptions.DrawFullLine = False
+          SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+          SearchOptions.FromStart = False
+          OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+          Align = alClient
+          AlternateColor = clMoneyGreen
+          Color = clWindow
+          DrawFullLine = False
+          FocusColor = clRed
+          SelectedColor = clHighlight
+          DataSource = dmPrincipal.dsUsuarios
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          TabOrder = 0
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Dados'
+        ClientHeight = 188
+        ClientWidth = 552
+        object Label1: TLabel
+          Left = 8
+          Height = 15
+          Top = 8
+          Width = 41
+          Caption = 'Código:'
+          ParentColor = False
+        end
+        object Label2: TLabel
+          Left = 96
+          Height = 15
+          Top = 8
+          Width = 79
+          Caption = 'Nome Usuário'
+          ParentColor = False
+        end
+        object DBEdit1: TDBEdit
+          Left = 8
+          Height = 23
+          Top = 24
+          Width = 80
+          DataField = 'USU_IDUSUARIO'
+          DataSource = dmPrincipal.dsUsuarios
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 0
+        end
+        object DBEdit2: TDBEdit
+          Left = 96
+          Height = 23
+          Top = 24
+          Width = 368
+          DataField = 'USU_NOME'
+          DataSource = dmPrincipal.dsUsuarios
+          MaxLength = 30
+          TabOrder = 1
+        end
+        object Label3: TLabel
+          Left = 120
+          Height = 15
+          Top = 48
+          Width = 37
+          Caption = 'Senha:'
+          ParentColor = False
+        end
+        object Label4: TLabel
+          Left = 296
+          Height = 15
+          Top = 48
+          Width = 74
+          Caption = 'ContraSenha:'
+          ParentColor = False
+        end
+        object DBEdit3: TDBEdit
+          Left = 120
+          Height = 23
+          Top = 64
+          Width = 168
+          DataField = 'USU_SENHA'
+          DataSource = dmPrincipal.dsUsuarios
+          MaxLength = 20
+          PasswordChar = '#'
+          TabOrder = 2
+        end
+        object Edit1: TEdit
+          Left = 296
+          Height = 23
+          Top = 64
+          Width = 168
+          EchoMode = emPassword
+          PasswordChar = '#'
+          TabOrder = 3
+        end
+        object DBEdit4: TDBEdit
+          Left = 8
+          Height = 23
+          Top = 112
+          Width = 87
+          DataField = 'USU_NIVEL'
+          DataSource = dmPrincipal.dsUsuarios
+          MaxLength = 1
+          TabOrder = 4
+        end
+        object DBLookupComboBox1: TDBLookupComboBox
+          Left = 104
+          Height = 23
+          Top = 112
+          Width = 248
+          DataField = 'USU_NIVEL'
+          DataSource = dmPrincipal.dsUsuarios
+          KeyField = 'PERFIL_ID'
+          ListField = 'PER_NIVELDESCRICAO'
+          ListFieldIndex = 0
+          ListSource = dmPrincipal.dsPerfil
+          LookupCache = False
+          TabOrder = 5
+        end
+        object Label5: TLabel
+          Left = 8
+          Height = 15
+          Top = 94
+          Width = 87
+          Caption = 'Nível de Acesso'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 104
+          Height = 15
+          Top = 94
+          Width = 57
+          Caption = 'Descrição:'
+          ParentColor = False
+        end
+        object Label9: TLabel
+          Left = 8
+          Height = 15
+          Top = 48
+          Width = 94
+          Caption = 'Nome para Login'
+          ParentColor = False
+        end
+        object DBEdit5: TDBEdit
+          Left = 8
+          Height = 23
+          Top = 65
+          Width = 104
+          DataField = 'USU_LOGIN'
+          DataSource = dmPrincipal.dsUsuarios
+          MaxLength = 20
+          TabOrder = 6
+        end
+      end
+    end
+    object DBNavigator1: TDBNavigator[1]
+      Left = 8
+      Height = 25
+      Top = 240
+      Width = 241
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 25
+      ClientWidth = 241
+      DataSource = dmPrincipal.dsUsuarios
+      Options = []
+      TabOrder = 1
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    end
+  end
+  object Label8: TLabel[2]
+    Left = 104
+    Height = 15
+    Top = 94
+    Width = 37
+    Caption = 'Senha:'
+    ParentColor = False
+  end
+  inherited ActionList1: TActionList[3]
+    Left = 280
+    Top = 8
+    inherited act_Novo: TAction
+      OnExecute = act_NovoExecute
+    end
+    inherited act_Alterar: TAction
+      OnExecute = act_AlterarExecute
+    end
+    inherited act_Cancelar: TAction
+      OnExecute = act_CancelarExecute
+    end
+    inherited act_Salvar: TAction
+      OnExecute = act_SalvarExecute
+    end
+    inherited act_Fechar: TAction
+      OnExecute = act_FecharExecute
+    end
+  end
+  inherited ACBrEnterTab1: TACBrEnterTab[4]
+    Left = 472
+    Top = 0
+  end
+end

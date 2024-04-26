@@ -1,0 +1,160 @@
+inherited F_ConsultaPaciente: TF_ConsultaPaciente
+  Width = 666
+  Caption = 'Consulta Paciente'
+  ClientWidth = 666
+  inherited Panel1: TPanel
+    Width = 666
+    ClientWidth = 666
+  end
+  inherited EdtCon: TEdit
+    Width = 502
+    OnExit = act_pesquisarExecute
+  end
+  inherited Label4: TLabel
+    Top = 0
+  end
+  inherited Label5: TLabel
+    Left = 8
+  end
+  inherited Cbpesq: TComboBox
+    Left = 8
+    ItemIndex = 2
+    Items.Strings = (
+      'Todos'
+      'Código'
+      'Nome'
+      'Celular'
+    )
+    Text = 'Nome'
+  end
+  object RxDBGrid1: TRxDBGrid[5]
+    Left = 8
+    Height = 336
+    Top = 48
+    Width = 632
+    ColumnDefValues.BlobText = '(blob)'
+    TitleButtons = False
+    AutoSort = True
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Cód.:Paciente'
+        Width = 80
+        FieldName = 'PAC_IDPACIENTE'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Paciente'
+        Width = 350
+        FieldName = 'PAC_NOME'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'Celular'
+        Width = 120
+        FieldName = 'PAC_CEL'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Não está vazio)'
+        Filter.AllValue = '(Todos os valores)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end>
+    KeyStrokes = <    
+      item
+        Command = rxgcShowFindDlg
+        ShortCut = 16454
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowColumnsDlg
+        ShortCut = 16471
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowFilterDlg
+        ShortCut = 16468
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowSortDlg
+        ShortCut = 16467
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowQuickFilter
+        ShortCut = 16465
+        Enabled = True
+      end    
+      item
+        Command = rxgcHideQuickFilter
+        ShortCut = 16456
+        Enabled = True
+      end    
+      item
+        Command = rxgcSelectAll
+        ShortCut = 16449
+        Enabled = True
+      end    
+      item
+        Command = rxgcDeSelectAll
+        ShortCut = 16429
+        Enabled = True
+      end    
+      item
+        Command = rxgcInvertSelection
+        ShortCut = 16426
+        Enabled = True
+      end    
+      item
+        Command = rxgcOptimizeColumnsWidth
+        ShortCut = 16427
+        Enabled = True
+      end    
+      item
+        Command = rxgcCopyCellValue
+        ShortCut = 16451
+        Enabled = True
+      end>
+    FooterOptions.DrawFullLine = False
+    SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+    SearchOptions.FromStart = False
+    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+    AlternateColor = clMoneyGreen
+    Color = clWindow
+    DrawFullLine = False
+    FocusColor = clRed
+    SelectedColor = clHighlight
+    DataSource = dmPrincipal.dsPacientes
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 3
+  end
+  inherited ActionList1: TActionList[6]
+    Top = 8
+    inherited act_pesquisar: TAction
+      OnExecute = act_pesquisarExecute
+      ShortCut = 13
+    end
+  end
+end
