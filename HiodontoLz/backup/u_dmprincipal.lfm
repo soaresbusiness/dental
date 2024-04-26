@@ -1,8 +1,8 @@
 object dmPrincipal: TdmPrincipal
   OldCreateOrder = False
   Height = 743
-  HorizontalOffset = 515
-  VerticalOffset = 230
+  HorizontalOffset = 539
+  VerticalOffset = 43
   Width = 1331
   PPI = 144
   object conexao: TZConnection
@@ -12,6 +12,7 @@ object dmPrincipal: TdmPrincipal
       'controls_cp=CP_UTF8'
       'RawStringEncoding=DB_CP'
     )
+    Connected = True
     DisableSavepoints = False
     HostName = '127.0.0.1'
     Port = 3306

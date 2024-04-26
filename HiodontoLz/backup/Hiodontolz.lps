@@ -8,6 +8,7 @@
       <Unit>
         <Filename Value="Hiodontolz.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="8"/>
         <TopLine Value="15"/>
         <CursorPos Y="30"/>
@@ -149,6 +150,7 @@
         <CursorPos X="54" Y="87"/>
         <UsageCount Value="204"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="u_consultaprofissional.pas"/>
@@ -167,12 +169,12 @@
         <ComponentName Value="dmPrincipal"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <TopLine Value="362"/>
         <CursorPos Y="362"/>
         <UsageCount Value="204"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="u_consultatratamento.pas"/>
@@ -363,7 +365,11 @@
         <UsageCount Value="8"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="28">
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="u_dmprincipal.pas"/>
+        <Caret Line="306" TopLine="306"/>
+      </Position>
       <Position>
         <Filename Value="u_dmprincipal.pas"/>
         <Caret Line="305" TopLine="305"/>
@@ -479,10 +485,6 @@
       <Position>
         <Filename Value="u_dente.pas"/>
         <Caret Line="231" Column="63" TopLine="223"/>
-      </Position>
-      <Position>
-        <Filename Value="Hiodontolz.lpr"/>
-        <Caret Line="30" TopLine="15"/>
       </Position>
     </JumpHistory>
     <RunParams>
